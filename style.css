@@ -463,6 +463,15 @@ body {
   /* Fallback for when there is no custom background color defined. */
 }
 
+header.site-header {
+  background-color: #fff;
+}
+
+div.header-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 hr {
   background-color: #ccc;
   border: 0;

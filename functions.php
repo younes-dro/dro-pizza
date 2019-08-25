@@ -120,9 +120,16 @@ add_action( 'widgets_init', 'dro_pizza_widgets_init' );
  * Enqueue scripts and styles.
  */
 function dro_pizza_scripts() {
-	wp_enqueue_style( 'dro-pizza-style', get_stylesheet_uri() );
+        /**
+         * CSS
+         */
+	wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri().'/assets/bootstrap/css/bootstrap.css',array(),'20190825' );
 
-	wp_enqueue_script( 'dro-pizza-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20190825', true );
+        wp_enqueue_style( 'dro-pizza-style', get_stylesheet_uri() );
+	/**
+         * Js
+         */
+        wp_enqueue_script( 'dro-pizza-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20190825', true );
 
 	wp_enqueue_script( 'dro-pizza-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20190825', true );
 

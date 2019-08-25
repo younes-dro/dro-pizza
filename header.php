@@ -22,9 +22,12 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+    <div class="container-fluid">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dro-pizza' ); ?></a>
-
+        <div class="row">
+        <div class="col-12 header-container">
 	<header id="masthead" class="site-header">
+
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -53,6 +56,9 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
+
 	</header><!-- #masthead -->
+        </div><!-- .col-12 -->
+        </div><!-- .row -->
 
 	<div id="content" class="site-content">
