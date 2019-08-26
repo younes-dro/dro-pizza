@@ -27,6 +27,16 @@
         <div class="row">
         <div class="col-12 header-container">
 	<header id="masthead" class="site-header">
+            
+            <div class="wavy">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path 
+                    d="M79,74.27 C216.83,192.92 307.3,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 ZM79,74.27 C216.83,192.92 307.3,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z"
+                style="stroke: none;fill: #ffff;">
+                        
+                </path>
+                </svg>
+            </div><!-- .wavy -->
 
 		<div class="site-branding">
 			<?php

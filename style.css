@@ -472,6 +472,15 @@ div.header-container {
   padding-right: 0;
 }
 
+div.wavy {
+  height: 150px;
+  overflow: hidden;
+}
+
+svg {
+  filter: drop-shadow(10px 2px 5px rgba(0, 0, 0, 0.6));
+}
+
 hr {
   background-color: #ccc;
   border: 0;
