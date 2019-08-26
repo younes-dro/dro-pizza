@@ -815,6 +815,19 @@ a:hover, a:active {
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+## Site title and Tagline 
+--------------------------------------------------------------*/
+h1.site-title a {
+  background: linear-gradient(to bottom, #f00 0%, #630000 100%);
+  color: #fff;
+  padding: 12px;
+  transform: skewX(-10deg);
+  box-shadow: -2px 3px 9px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  border-radius: 10px;
+}
+
+/*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
 .sticky {
