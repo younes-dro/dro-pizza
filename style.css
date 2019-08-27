@@ -475,6 +475,7 @@ div.header-container {
 div.wavy {
   height: 150px;
   overflow: hidden;
+  background-image: url("assets/images/css/wavy.svg");
 }
 
 svg {
