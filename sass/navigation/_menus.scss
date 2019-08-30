@@ -2,7 +2,7 @@
     clear: both;
     display: none;
     background-color: #997408;
-    background: linear-gradient(to bottom, #ffcf44 10%, #997408 120%);
+    background: linear-gradient(to right,#ff8a00,#da1b60);
     z-index: 1;        
 
     ul {
@@ -32,6 +32,7 @@
             }
             a{
                 width: 200px;
+                margin-right: 0;
             }
             li.page_item_has_children{
                 >a {
@@ -69,15 +70,15 @@
     a {
         display: block;
         text-decoration: none;
-        color: #000;
+        color: #fff;
         margin-right: 5px;
         font-size: .8em;
         padding-left: 5px;
         padding-right: 5px;
-        font-style: italic;
         font-weight: 600;
+        font-family:Robot;
         &:hover{
-            background-color: #f9bb08;
+            background-color: #FF8A00;
             color: #fff;
         }
     }
