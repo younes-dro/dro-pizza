@@ -26,9 +26,15 @@
                 <div class="row">
                     <div class="col-12 header-container">
                         <header id="masthead" class="site-header">
+                            <svg viewBox="0 0 500 150" preserveAspectRatio="none" >
+                            <path 
+                                d="M79,74.27 C216.83,192.92 307.3,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 ZM79,74.27 C216.83,192.92 307.3,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z"
+                                style="stroke: none;fill: #ffff;">
 
-                            <div class="wavy">
-                                                            <nav id="site-navigation" class="main-navigation">
+                            </path>
+                            </svg>
+
+                            <nav id="site-navigation" class="main-navigation">
                                 <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'dro-pizza'); ?></button>
                                 <?php
                                 wp_nav_menu(array(
@@ -37,14 +43,6 @@
                                 ));
                                 ?>
                             </nav><!-- #site-navigation -->
-                                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                                <path 
-                                    d="M79,74.27 C216.83,192.92 307.3,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 ZM79,74.27 C216.83,192.92 307.3,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z"
-                                    style="stroke: none;fill: #ffff;">
-
-                                </path>
-                                </svg>
-                            </div><!-- .wavy -->
 
                             <div class="site-branding">
                                 <?php
