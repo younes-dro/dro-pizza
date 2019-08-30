@@ -871,7 +871,21 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Site title and Tagline 
 --------------------------------------------------------------*/
-h1.site-title a {
+div.site-branding {
+  background-color: aquamarine;
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+div.site-branding h1.site-title {
+  position: absolute;
+  left: 150px;
+  font-size: 1em;
+  top: 0px;
+  min-width: 150px;
+}
+div.site-branding h1.site-title a {
   background: linear-gradient(to right, #f00 3%, #630000 120%);
   color: #fff;
   padding: 12px;
@@ -956,6 +970,12 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
   display: inline-block;
+  display: inline-block;
+  max-width: 100px;
+  height: auto;
+  position: absolute;
+  left: 50px;
+  top: 0;
 }
 
 /*--------------------------------------------------------------
