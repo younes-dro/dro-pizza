@@ -123,6 +123,10 @@ function dro_pizza_scripts() {
         /**
          * CSS
          */
+        wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri().'/assets/font-awesome/css/font-awesome.css',array(),'20190825' );
+        
+        wp_enqueue_style( 'ionicons', get_stylesheet_directory_uri().'/assets/ionicons/css/ionicons.css',array(),'20190825' );
+         
 	wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri().'/assets/bootstrap/css/bootstrap.css',array(),'20190825' );
 
         wp_enqueue_style( 'dro-pizza-style', get_stylesheet_uri() );
