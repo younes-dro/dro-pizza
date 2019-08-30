@@ -29,7 +29,7 @@
                             <svg viewBox="0 0 500 150" preserveAspectRatio="none" >
                             <path 
                                 d="M79,74.27 C216.83,192.92 307.3,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 ZM79,74.27 C216.83,192.92 307.3,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z"
-                                style="stroke: none;fill: #ffff;">
+                                style="stroke: none;fill: #f1f1f1;opacity: .2">
 
                             </path>
                             </svg>
