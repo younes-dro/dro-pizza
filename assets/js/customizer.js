@@ -30,8 +30,7 @@
 				} );
 			} else {
 				$( '.site-title, .site-description' ).css( {
-					'clip': 'auto',
-					'position': 'relative'
+					'clip': 'auto'
 				} );
 				$( '.site-title a, .site-description' ).css( {
 					'color': to
