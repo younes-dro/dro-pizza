@@ -898,7 +898,7 @@ div.site-branding h1.site-title {
 }
 div.site-branding h1.site-title a {
   background: linear-gradient(to right, #f00 3%, #630000 120%);
-  color: #fff;
+  /*color: #fff;*/
   padding: 12px;
   transform: skewX(-10deg);
   box-shadow: -2px 3px 9px rgba(0, 0, 0, 0.5);
@@ -918,7 +918,7 @@ div.site-branding div.site-description-container {
 }
 div.site-branding P.site-description {
   background-color: rgba(6, 6, 6, 0.8);
-  color: #fff;
+  /*color: #fff;*/
   width: 90%;
   text-align: center;
   font-size: 0.8em;
@@ -940,6 +940,11 @@ div.site-branding P.site-description {
   div.site-branding h1.site-title {
     font-size: 1.5em;
   }
+}
+
+.site-title a,
+.site-description {
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
