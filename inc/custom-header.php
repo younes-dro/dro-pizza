@@ -19,7 +19,7 @@
 function dro_pizza_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'dro_pizza_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
+		'default-text-color'     => 'ffffff',
 		'width'                  => 1500,
 		'height'                 => 700,
 		'flex-height'            => true,
