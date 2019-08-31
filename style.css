@@ -42,6 +42,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("assets/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Courgette-Regular";
+  src: url("assets/fonts/Courgette-Regular.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("assets/fonts/Montserrat-Regular.ttf");
+}
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -459,7 +473,10 @@ big {
 @font-face {
   font-family: "Montserrat-Regular";
   src: url("assets/fonts/Montserrat-Regular.ttf");
-  font-weight: normal;
+}
+@font-face {
+  font-family: "Suranna";
+  src: url("assets/fonts/Suranna-Regular.ttf");
 }
 /*--------------------------------------------------------------
 # Elements
