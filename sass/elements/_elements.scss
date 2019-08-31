@@ -12,8 +12,13 @@ body {
     background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
 header.site-header{
-    background-color: $color__background-header;
+    background: linear-gradient(to right,$color__background-header-from,$color__background-header-to);
     position: relative;
+    min-height: 310px;
+    transition: all .5s;
+    @media screen and (min-width: 768px){
+        min-height:350px;
+    }
 }
 div.header-container{
     padding-left: 0;
@@ -26,7 +31,8 @@ svg{
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 0;
+    z-index: 2;
+    opacity: .8;
 }
 hr {
     background-color: $color__background-hr;
