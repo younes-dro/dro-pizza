@@ -17,7 +17,7 @@ div.site-branding{
         bottom: 0px; 
         a{
             background: linear-gradient(to right, $color__background-site-title-start 3%, $color__background-site-title-end 120%);
-            color: #fff;
+            /*color: #fff;*/
             padding: 12px;
             transform: skewX(-10deg);
             box-shadow: -2px 3px 9px rgba(0, 0, 0, 0.5);
@@ -38,7 +38,7 @@ div.site-branding{
     }
     P.site-description{
         background-color: rgba(6, 6, 6, 0.8);
-        color: #fff;
+        /*color: #fff;*/
         width: 90%;
         text-align: center;
         font-size: .8em;
@@ -57,4 +57,8 @@ div.site-branding{
             font-size: 1.5em;
         }
     }
+}
+.site-title a,
+.site-description{
+    color: #fff;
 }
