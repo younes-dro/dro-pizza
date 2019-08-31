@@ -387,7 +387,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Montserrat-Regular";
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -395,6 +395,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+  font-family: "Courgette-Regular";
 }
 
 p {
@@ -445,6 +446,21 @@ big {
   font-size: 125%;
 }
 
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("assets/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Courgette-Regular";
+  src: url("assets/fonts/Courgette-Regular.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("assets/fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+}
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -703,8 +719,8 @@ a:hover, a:active {
   font-size: 0.8em;
   padding-left: 5px;
   padding-right: 5px;
-  font-weight: 600;
-  font-family: Robot;
+  font-family: "Roboto-Regular";
+  font-weight: 400;
 }
 .main-navigation a:hover {
   background-color: #FF8A00;
