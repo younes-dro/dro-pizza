@@ -465,8 +465,15 @@ body {
 }
 
 header.site-header {
-  background-color: #b6adad;
+  background: linear-gradient(to right, #ff8a00, #da1b60);
   position: relative;
+  min-height: 310px;
+  transition: all 0.5s;
+}
+@media screen and (min-width: 768px) {
+  header.site-header {
+    min-height: 350px;
+  }
 }
 
 div.header-container {
@@ -481,7 +488,8 @@ svg {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 0;
+  z-index: 2;
+  opacity: 0.8;
 }
 
 hr {
@@ -644,8 +652,8 @@ a:hover, a:active {
   clear: both;
   display: none;
   background-color: #997408;
-  background: linear-gradient(to bottom, #ffcf44 10%, #997408 120%);
-  z-index: 1;
+  background: linear-gradient(to right, #ff8a00, #da1b60);
+  z-index: 3;
 }
 .main-navigation ul {
   list-style: none;
@@ -670,6 +678,7 @@ a:hover, a:active {
 }
 .main-navigation ul ul a {
   width: 200px;
+  margin-right: 0;
 }
 .main-navigation ul ul li.page_item_has_children > a:after {
   content: "";
@@ -689,16 +698,16 @@ a:hover, a:active {
 .main-navigation a {
   display: block;
   text-decoration: none;
-  color: #000;
+  color: #fff;
   margin-right: 5px;
   font-size: 0.8em;
   padding-left: 5px;
   padding-right: 5px;
-  font-style: italic;
   font-weight: 600;
+  font-family: Robot;
 }
 .main-navigation a:hover {
-  background-color: #f9bb08;
+  background-color: #FF8A00;
   color: #fff;
 }
 .main-navigation ul.nav-menu > li.page_item_has_children > a:after {
@@ -716,9 +725,7 @@ a:hover, a:active {
   .main-navigation {
     display: block;
     min-height: 45px;
-    border-radius: 50px;
     margin: 0 auto;
-    /* width: 50%; */
     position: absolute;
     top: 20px;
     right: 100px;
@@ -872,18 +879,22 @@ a:hover, a:active {
 ## Site title and Tagline 
 --------------------------------------------------------------*/
 div.site-branding {
-  background-color: aquamarine;
+  background: radial-gradient(circle at top right, #3f6e79, #0f0e16);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: 2;
-  position: relative;
   margin: 0;
   padding: 0;
+  z-index: 1;
+  min-height: 250px;
+  border-bottom-right-radius: 80px;
 }
 div.site-branding h1.site-title {
   position: absolute;
-  left: 150px;
+  left: 10px;
   font-size: 1em;
-  top: 0px;
-  min-width: 150px;
+  bottom: 0px;
 }
 div.site-branding h1.site-title a {
   background: linear-gradient(to right, #f00 3%, #630000 120%);
@@ -893,6 +904,42 @@ div.site-branding h1.site-title a {
   box-shadow: -2px 3px 9px rgba(0, 0, 0, 0.5);
   display: inline-block;
   border-radius: 10px;
+}
+div.site-branding h1.site-title a:hover {
+  background: linear-gradient(to right, #f00 3%, #f00 120%);
+  text-decoration: none;
+  color: #f1f1f1;
+}
+div.site-branding div.site-description-container {
+  position: absolute;
+  top: 120px;
+  width: 100%;
+  margin: 0 auto;
+}
+div.site-branding P.site-description {
+  background-color: rgba(6, 6, 6, 0.8);
+  color: #fff;
+  width: 90%;
+  text-align: center;
+  font-size: 0.8em;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 10px;
+  transform: all 0.5s;
+}
+@media screen and (min-width: 768px) {
+  div.site-branding P.site-description {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 768px) {
+  div.site-branding {
+    background-position: left center;
+    /*min-height:350px;*/
+  }
+  div.site-branding h1.site-title {
+    font-size: 1.5em;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -970,12 +1017,18 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
   display: inline-block;
-  display: inline-block;
-  max-width: 100px;
+  max-width: 150px;
   height: auto;
   position: absolute;
-  left: 50px;
+  left: 20%;
   top: 0;
+  z-index: 4;
+  transition: all 1s;
+}
+@media screen and (min-width: 992px) {
+  .custom-logo-link {
+    left: 20px;
+  }
 }
 
 /*--------------------------------------------------------------
