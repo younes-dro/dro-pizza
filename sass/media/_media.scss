@@ -17,12 +17,16 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
     display: inline-block;
-    display: inline-block;
-    max-width: 100px;
+    max-width: 150px;
     height: auto;
     position: absolute;
-    left: 50px;
+    left: 20%;
     top: 0;
+    z-index: 4;
+    transition: all 1s;
+    @media screen and (min-width: 992px){
+        left:20px;
+    }
 }
 
 /*--------------------------------------------------------------
