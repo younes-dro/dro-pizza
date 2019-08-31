@@ -29,7 +29,7 @@
                             <svg viewBox="0 0 500 150" preserveAspectRatio="none" >
                             <path 
                                 d="M79,74.27 C216.83,192.92 307.3,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 ZM79,74.27 C216.83,192.92 307.3,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z"
-                                style="stroke: none;fill: #f1f1f1;opacity: .2">
+                                style="stroke: none;fill: #000;">
 
                             </path>
                             </svg>
@@ -44,22 +44,28 @@
                                 ?>
                             </nav><!-- #site-navigation -->
 
-                            <div class="site-branding">
+                            <?php
+                            $headerImage = get_header_image();
+//                            echo $headerImage;
+                            ?>
+
+                            <div class="site-branding" style="background-image: url(<?php echo $headerImage ?>)">
                                 <?php
                                 the_custom_logo();
-                                if (is_front_page() && is_home()) :
+//                                echo '<pre>';
+//                                var_dump(get_bloginfo('name'));
+//                                echo '</pre>';
+                                if (get_bloginfo('name') || is_customize_preview()) :
                                     ?>
                                     <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
                                     <?php
-                                else :
-                                    ?>
-                                    <p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-                                <?php
                                 endif;
                                 $dro_pizza_description = get_bloginfo('description', 'display');
                                 if ($dro_pizza_description || is_customize_preview()) :
                                     ?>
-                                    <p class="site-description"><?php echo $dro_pizza_description; /* WPCS: xss ok. */ ?></p>
+                                    <div class="site-description-container">
+                                        <p class="site-description"><?php echo $dro_pizza_description; /* WPCS: xss ok. */ ?></p>
+                                    </div>
                                 <?php endif; ?>
                             </div><!-- .site-branding -->
 
