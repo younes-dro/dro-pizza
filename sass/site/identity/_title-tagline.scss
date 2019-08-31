@@ -1,16 +1,20 @@
 div.site-branding{
-    background-color: aquamarine;
+    background:radial-gradient(circle at top right,#3f6e79,#0f0e16);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     z-index: 2;
-    position: relative;
     margin: 0;
     padding: 0;
+    z-index:1;
+    min-height:250px;
+    border-bottom-right-radius:80px;
 
     h1.site-title{
         position: absolute;
-        left: 150px;
+        left: 10px;
         font-size: 1em;
-        top: 0px;
-        min-width: 150px;    
+        bottom: 0px; 
         a{
             background: linear-gradient(to right, $color__background-site-title-start 3%, $color__background-site-title-end 120%);
             color: #fff;
@@ -18,7 +22,39 @@ div.site-branding{
             transform: skewX(-10deg);
             box-shadow: -2px 3px 9px rgba(0, 0, 0, 0.5);
             display: inline-block;
-            border-radius: 10px;        
+            border-radius: 10px;
+            &:hover{
+                background: linear-gradient(to right, $color__background-site-title-start 3%, $color__background-site-title-start 120%);
+                text-decoration: none;
+                color: #f1f1f1;
+            }
+        }
+    }
+    div.site-description-container{
+        position: absolute;
+        top: 120px;
+        width: 100%;
+        margin: 0 auto;        
+    }
+    P.site-description{
+        background-color: rgba(6, 6, 6, 0.8);
+        color: #fff;
+        width: 90%;
+        text-align: center;
+        font-size: .8em;
+        margin: 0 auto;
+        border-radius: 20px;
+        padding: 10px;
+        transform: all .5s;
+        @media screen and (min-width: 768px){
+            font-size: 1em;
+        }
+    }
+    @media screen and (min-width: 768px){
+        background-position: left center;
+        /*min-height:350px;*/
+        h1.site-title{
+            font-size: 1.5em;
         }
     }
 }
