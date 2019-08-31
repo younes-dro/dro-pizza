@@ -3,7 +3,7 @@
     display: none;
     background-color: #997408;
     background: linear-gradient(to right,#ff8a00,#da1b60);
-    z-index: 1;        
+    z-index: 3;        
 
     ul {
         list-style: none;
@@ -102,9 +102,7 @@
     @media screen and (min-width: 992px){
         display: block;
         min-height: 45px;
-        border-radius: 50px;
         margin: 0 auto;
-        /* width: 50%; */
         position: absolute;
         top: 20px;
         right: 100px;
