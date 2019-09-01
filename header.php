@@ -28,7 +28,7 @@
                 $phone_infos = get_theme_mod('phone_infos');
                 if (!empty(trim($adress_infos)) || !empty(trim($phone_infos))):
                     ?>
-                    <div class = "d-flex justify-content-center top-header">
+                    <div class = "row justify-content-center top-header">
                         <div class = "p2">
                             <?php if (!empty(trim($adress_infos))): ?>
                                 <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
