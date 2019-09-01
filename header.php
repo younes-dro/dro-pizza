@@ -26,15 +26,20 @@
                 <?php
                 $adress_infos = get_theme_mod('adress_infos');
                 $phone_infos = get_theme_mod('phone_infos');
-                if (!empty(trim($adress_infos)) || !empty(trim($phone_infos)) ):
+                if (!empty(trim($adress_infos)) || !empty(trim($phone_infos))):
                     ?>
-                    <div class = "row top-header">
-                        <div class = "col-sm-12 col-md-6">
-                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i><span><?php echo esc_html($adress_infos);
-                            ?></span>
+                    <div class = "d-flex justify-content-center top-header">
+                        <div class = "p2">
+                            <?php if (!empty(trim($adress_infos))): ?>
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <span><?php echo esc_html($adress_infos); ?></span>
+                            <?php endif; ?>
                         </div>
-                        <div class="col-sm-12 col-md-6 right">
-                           <i class="fas fa-shipping-fast" aria-hidden="true"></i><a href="" class="phone"><?php echo esc_html($phone_infos); ?></a>
+                        <div class="p2">
+                            <?php if (!empty(trim($phone_infos))): ?>
+                                <i class="fas fa-shipping-fast" aria-hidden="true"></i>
+                                <a href="" class="phone"><?php echo esc_html($phone_infos); ?></a>
+                            <?php endif; ?>
                         </div>                    
                     </div>    
                 <?php endif; ?>
@@ -82,7 +87,7 @@
                                     <div class="site-description-container">
                                         <p class="site-description"><?php echo $dro_pizza_description; /* WPCS: xss ok. */ ?></p>
                                     </div>
-<?php endif; ?>
+                                <?php endif; ?>
                             </div><!-- .site-branding -->
 
                         </header><!-- #masthead -->
