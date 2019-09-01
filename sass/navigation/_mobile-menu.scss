@@ -86,12 +86,14 @@ body.wp_mm_enable{
         li.active>.children {
             right: 0;
         }
-        li.page_item_has_children{
+        li.page_item_has_children, 
+        li.menu-item-has-children{
             >a{
                 width: 50%
             }
         }
-        li.page_item_has_children{
+        li.page_item_has_children,
+        li.menu-item-has-children{
             span{
                 font-size: 24px;
                 cursor: pointer;
