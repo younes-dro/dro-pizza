@@ -493,6 +493,9 @@ body {
   border-right: 1px solid;
   padding-right: 10px;
 }
+.top-header i.fas {
+  color: #fe8802;
+}
 .top-header a.phone {
   color: #f1f1f1;
 }
