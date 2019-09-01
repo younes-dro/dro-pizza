@@ -460,24 +460,6 @@ big {
   font-size: 125%;
 }
 
-@font-face {
-  font-family: "Roboto-Regular";
-  src: url("assets/fonts/Roboto-Regular.ttf");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Courgette-Regular";
-  src: url("assets/fonts/Courgette-Regular.ttf");
-  font-weight: 900;
-}
-@font-face {
-  font-family: "Montserrat-Regular";
-  src: url("assets/fonts/Montserrat-Regular.ttf");
-}
-@font-face {
-  font-family: "Suranna";
-  src: url("assets/fonts/Suranna-Regular.ttf");
-}
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -495,6 +477,29 @@ html {
 body {
   background: #344759;
   /* Fallback for when there is no custom background color defined. */
+}
+
+.top-header {
+  background-color: #2a2d2f;
+  min-height: 40px;
+  color: #dee2e6;
+  line-height: 40px;
+  font-size: 0.8em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.top-header div:nth-child(1) {
+  margin-right: 10px;
+  border-right: 1px solid;
+  padding-right: 10px;
+}
+.top-header a.phone {
+  color: #f1f1f1;
+}
+@media screen and (min-width: 992px) {
+  .top-header {
+    font-size: 1.2em;
+  }
 }
 
 header.site-header {
