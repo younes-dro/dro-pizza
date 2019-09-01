@@ -11,6 +11,27 @@ html {
 body {
     background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
+.top-header{
+    background-color: #2a2d2f;
+    min-height: 40px;
+    color: #dee2e6;
+    line-height: 40px;
+    font-size: .8em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    div:nth-child(1){
+        margin-right: 10px;
+        border-right: 1px solid;
+        padding-right: 10px;
+    }
+    a.phone{
+        color: #f1f1f1;
+    }
+    @media screen and (min-width:992px){
+        font-size:1.2em;
+    }
+}
+
 header.site-header{
     background: linear-gradient(to right,$color__background-header-from,$color__background-header-to);
     position: relative;
