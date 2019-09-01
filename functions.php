@@ -123,7 +123,9 @@ function dro_pizza_scripts() {
         /**
          * CSS
          */
-        wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri().'/assets/font-awesome/css/font-awesome.css',array(),'20190825' );
+        wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri().'/assets/font-awesome/css/fontawesome.css',array(),'20190825' );
+        
+        wp_enqueue_style( 'fontawesome-solid', get_stylesheet_directory_uri().'/assets/font-awesome/css/solid.css',array(),'20190825' );
         
         wp_enqueue_style( 'ionicons', get_stylesheet_directory_uri().'/assets/ionicons/css/ionicons.css',array(),'20190825' );
          
