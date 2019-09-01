@@ -23,6 +23,22 @@
         <div id="page" class="site">
             <div class="container-fluid">
                 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'dro-pizza'); ?></a>
+                <?php
+                $adress_infos = get_theme_mod('adress_infos');
+                $phone_infos = get_theme_mod('phone_infos');
+                if (!empty(trim($adress_infos)) || !empty(trim($phone_infos)) ):
+                    ?>
+                    <div class = "row top-header">
+                        <div class = "col-sm-12 col-md-6">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i><span><?php echo esc_html($adress_infos);
+                            ?></span>
+                        </div>
+                        <div class="col-sm-12 col-md-6 right">
+                           <i class="fas fa-shipping-fast" aria-hidden="true"></i><a href="" class="phone"><?php echo esc_html($phone_infos); ?></a>
+                        </div>                    
+                    </div>    
+                <?php endif; ?>
+
                 <div class="row">
                     <div class="col-12 header-container">
                         <header id="masthead" class="site-header">
@@ -66,7 +82,7 @@
                                     <div class="site-description-container">
                                         <p class="site-description"><?php echo $dro_pizza_description; /* WPCS: xss ok. */ ?></p>
                                     </div>
-                                <?php endif; ?>
+<?php endif; ?>
                             </div><!-- .site-branding -->
 
                         </header><!-- #masthead -->
