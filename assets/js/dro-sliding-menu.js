@@ -11,7 +11,7 @@
                     "toggleMenuContainerId"     :   "toggle-menu-container",
                     "toggleMenuContainerClass"  :   "toggle-menu-container-class",
                     "wrapperClass"              :   "wp_mm_wrapper",
-                    "submenuClass"              :   "children",
+                    "submenuClass"              :   "sub-menu",
                     "bodyOverlayClass"          :   "body_overlay"
     };
     $.fn.droSlidingMenu = function (options) {
