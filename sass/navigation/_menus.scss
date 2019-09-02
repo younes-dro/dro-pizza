@@ -31,12 +31,12 @@
                 }
             }
             a{
-                width: 200px;
+                width: 150px;
                 margin-right: 0;
             }
-            li.page_item_has_children{
+            li.page_item_has_children,
+            li.menu-item-has-children{
                 >a {
-
                     &:after{
                         @include after-menu-has-children("\f3d1");
                     }
@@ -82,7 +82,8 @@
             color: #fff;
         }
     }
-    ul.nav-menu > li.page_item_has_children{
+    ul.nav-menu > li.page_item_has_children ,
+    ul.nav-menu > li.menu-item-has-children{
         > a:after{
             @include after-menu-has-children("\f3d0");
         }
