@@ -36,7 +36,7 @@ function dro_pizza_pingback_header() {
 }
 add_action( 'wp_head', 'dro_pizza_pingback_header' );
 
-if ( !function_exists('dro_pizza_sidebar_status')){
+if ( !function_exists( 'dro_pizza_sidebar_status' )){
     /*
      * Whether a sidebar is in use
      */
@@ -50,3 +50,32 @@ if ( !function_exists('dro_pizza_sidebar_status')){
     
 }
 add_action('after_setup_theme', 'dro_pizza_sidebar_status');
+
+if ( !function_exists('dro_piza_get_excerpt')){
+    /**
+     * Limit the excerpt by number of characters but do NOT truncate the last word.
+     * 
+     * @global object $post
+     * @param int $limit
+     * @param string $source
+     * @return string
+     */
+    function dro_piza_get_excerpt( $limit, $source = null ){
+        
+        global $post;
+        
+        $excerpt = $source == "content" ? get_the_content() : get_the_excerpt();
+        $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
+        $excerpt = strip_shortcodes($excerpt);
+        $excerpt = wp_strip_all_tags($excerpt);
+        $excerpt = substr($excerpt, 0, $limit);
+        $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+        $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+        $excerpt = $excerpt.'... <a '
+                . 'href="'.esc_url(get_permalink($post->ID)).'" '
+                . 'title="'.  esc_attr(get_the_title($post->ID)).'">'.  
+                esc_html__('more', 'dro-pizza').'</a>';
+        
+        return $excerpt;
+    }
+}
