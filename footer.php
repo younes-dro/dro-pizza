@@ -11,9 +11,9 @@
 
 ?>
 
-	</div><!-- #content -->
+	</div><!-- #content / .row -->
 
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="site-footer row">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'dro-pizza' ) ); ?>">
 				<?php

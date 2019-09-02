@@ -94,4 +94,4 @@
                     </div><!-- .col-12 -->
                 </div><!-- .row -->
 
-                <div id="content" class="site-content">
+                <div id="content" class="site-content row">
