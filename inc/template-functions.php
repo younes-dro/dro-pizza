@@ -35,3 +35,18 @@ function dro_pizza_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'dro_pizza_pingback_header' );
+
+if ( !function_exists('dro_pizza_sidebar_status')){
+    /*
+     * Whether a sidebar is in use
+     */
+    function dro_pizza_sidebar_status( $sidebar ) {
+        
+        if(is_active_sidebar( $sidebar )){
+            
+            return TRUE;
+        }
+    }
+    
+}
+add_action('after_setup_theme', 'dro_pizza_sidebar_status');
