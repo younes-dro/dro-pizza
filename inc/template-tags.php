@@ -26,7 +26,7 @@ if ( ! function_exists( 'dro_pizza_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'dro-pizza' ),
+			esc_html_x( 'on %s', 'post date', 'dro-pizza' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 

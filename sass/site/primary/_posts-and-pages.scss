@@ -1,23 +1,77 @@
 .sticky {
-	display: block;
+    display: block;
 }
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+    margin: 0 0 1.5em;
 }
 
 .updated:not(.published) {
-	display: none;
+    display: none;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+    margin: 1.5em 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+    clear: both;
+    margin: 0 0 1.5em;
+}
+/*
+* 
+*/
+article{
+    background-color: #4e6276;
+    max-height: 250px;
+    padding: 10px 10px 0 10px;
+    header.entry-header{
+        /*background-color:  #fff;*/
+        h2.entry-title{
+            font-size:1.5rem;
+            color:#fff;
+            a {
+                color:#fff;
+                letter-spacing: 0.6px;
+                &:hover{
+                    text-decoration: none;
+                    color: #f1f1f1;
+                }
+            }
+
+        }
+    }
+    div.entry-meta{
+        font-size:.8rem;
+        span.posted-on{
+            a{
+                color: #ccc;
+                &:before{
+                    @include entry-meta("\f3f3");
+                }
+
+            }
+        }
+        span.byline{
+            span.author{
+                a{
+                    color: #ccc;
+                    &:before{
+                        @include entry-meta("\f3a0");
+                    }
+                }
+
+            }
+
+        }
+    }
+    /*    .entry-content{
+            font-size: .8rem;
+        }*/
+    /*    footer.entry-footer{
+            font-size: .8rem;
+        }*/
 }
