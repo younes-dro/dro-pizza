@@ -48,7 +48,7 @@ article{
         font-size:.8rem;
         span.posted-on{
             a{
-                color: #ccc;
+                color: $color__entry-meta-link;
                 &:before{
                     @include entry-meta("\f3f3");
                 }
@@ -58,7 +58,7 @@ article{
         span.byline{
             span.author{
                 a{
-                    color: #ccc;
+                    color: $color__entry-meta-link;
                     &:before{
                         @include entry-meta("\f3a0");
                     }
