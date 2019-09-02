@@ -26,12 +26,6 @@ function dro_pizza_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'dro_pizza_body_classes' );
 
-add_filter('post_class', function($classes){
-   $classes[] = 'col-lg-3';
-   
-   return $classes;
-});
-
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
