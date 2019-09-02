@@ -10,6 +10,7 @@ html {
 
 body {
     background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+    color: #fff;
 }
 .top-header{
     background-color: #2a2d2f;
@@ -56,6 +57,13 @@ svg{
     right: 0;
     z-index: 2;
     opacity: .8;
+}
+div.site-content.row{
+    .col-lg-9,
+    .col-lg-3{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 hr {
     background-color: $color__background-hr;
