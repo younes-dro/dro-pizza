@@ -1,0 +1,16 @@
+// ionicon for menu element has children
+@mixin after-menu-has-children($content){
+    content: $content;
+    font-family: "Ionicons";
+    color: #eee;
+    vertical-align: top;
+    margin-left: 5px;
+}
+// ionicons for calendar and author in meta entry
+@mixin entry-meta($content){
+    display: inline-block;
+    font-family: "Ionicons";
+    content: $content;
+    font-weight: 100;
+    margin-right: 5px;
+}
