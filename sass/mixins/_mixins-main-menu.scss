@@ -1,8 +1,0 @@
-// ionicon from menu element has children
-@mixin after-menu-has-children($content){
-    content: $content;
-    font-family: "Ionicons";
-    color: #eee;
-    vertical-align: top;
-    margin-left: 5px;
-}
