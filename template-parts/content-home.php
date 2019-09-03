@@ -8,7 +8,13 @@
  */
 ?>
 <div class="col-12 col-md-6 col-lg-4">
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <?php
+    
+    $urlimg = get_the_post_thumbnail_url( get_the_ID(),'thumb-home-page' );
+    ?>
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+        <div class="bg-image" style="background-image:url('<?php echo esc_url( $urlimg )?>')"></div>
+        <div class="bg-overlay"></div>
         <header class="entry-header">
             <?php
             if (is_singular()) :
