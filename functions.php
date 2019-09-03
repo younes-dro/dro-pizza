@@ -79,6 +79,10 @@ if ( ! function_exists( 'dro_pizza_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+                /**
+                 * Add image size for thumbnails in the home , archive pages.
+                 */
+                add_image_size('thumb-home-page', 300, 300,TRUE);
 	}
 endif;
 add_action( 'after_setup_theme', 'dro_pizza_setup' );
