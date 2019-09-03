@@ -65,17 +65,21 @@ if ( !function_exists('dro_piza_get_excerpt')){
         global $post;
         
         $excerpt = $source == "content" ? get_the_content() : get_the_excerpt();
-        $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
-        $excerpt = strip_shortcodes($excerpt);
-        $excerpt = wp_strip_all_tags($excerpt);
-        $excerpt = substr($excerpt, 0, $limit);
-        $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
-        $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
-        $excerpt = $excerpt.'... <a '
-                . 'href="'.esc_url(get_permalink($post->ID)).'" '
-                . 'title="'.  esc_attr(get_the_title($post->ID)).'">'.  
-                esc_html__('more', 'dro-pizza').'</a>';
         
-        return $excerpt;
+        $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
+
+        
+        $excerpt = substr($excerpt, 0, $limit);
+        
+        $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+        
+        $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+        
+        $excerpt .= '...<a class="continue-reading"'
+                . ' href="'.esc_url(get_permalink($post->ID)).'" '
+                . ' title="'.  esc_attr(get_the_title($post->ID)).'">'.  
+                esc_html__('Continue Reading', 'dro-pizza').'</a>';
+        
+        return wp_kses($excerpt,'post');
     }
 }
