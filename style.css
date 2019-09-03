@@ -1241,8 +1241,14 @@ body.home article.active {
 
 body.home article {
   background-color: #4e6276;
-  min-height: 250px;
+  min-height: 300px;
   padding: 10px 10px 0 10px;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  body.home article {
+    min-height: 320px;
+  }
 }
 body.home article header.entry-header {
   /* .entry-title */
@@ -1310,8 +1316,15 @@ body.home article .entry-content a.continue-reading:after {
   display: inline-block;
   margin-left: 5px;
 }
+body.home article footer.entry-footer.open {
+  position: initial;
+}
 body.home article footer.entry-footer {
   font-size: 0.8rem;
+  position: absolute;
+  width: 90%;
+  bottom: 5px;
+  transition: all 0.5s;
 }
 body.home article footer.entry-footer span.open-meta-tags {
   color: #ccc;
@@ -1319,10 +1332,13 @@ body.home article footer.entry-footer span.open-meta-tags {
   display: inline-block;
   background-color: #576c81;
   width: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   height: 45px;
   cursor: pointer;
   line-height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  text-align: center;
 }
 body.home article footer.entry-footer span.open-meta-tags:after {
   display: block;
@@ -1332,6 +1348,9 @@ body.home article footer.entry-footer span.open-meta-tags:after {
 }
 body.home article footer.entry-footer span.open-meta-tags.active:after {
   content: "";
+}
+body.home article footer.entry-footer .meta-infos {
+  padding-bottom: 10px;
 }
 body.home article footer.entry-footer .meta-infos span.cat-links {
   display: block;
@@ -1376,6 +1395,7 @@ body.home article footer.entry-footer .meta-infos span.tags-links a {
   text-decoration: none;
   font-family: FontAwesome;
   display: inline-block;
+  margin: 5px;
 }
 body.home article footer.entry-footer .meta-infos span.tags-links:hover {
   color: #fff;
