@@ -26,6 +26,9 @@ function dro_pizza_customize_register($wp_customize) {
             'render_callback' => 'dro_pizza_customize_partial_blogdescription',
         ));
     }
+    // Retrive the defaults values
+    $default = dro_pizza_default_meta_options();
+    
     /**
      * Contact details section
      */
@@ -55,7 +58,46 @@ function dro_pizza_customize_register($wp_customize) {
         'label' => esc_html__('Delivery phone numbers', 'dro-pizza'),
         'type' => 'text',
         'section' => 'contact_infos'
-    ));    
+    ));
+    /**
+     * meta settings section
+     */
+    $wp_customize->add_section('meta_settings', array(
+        'title' => esc_html__('Content meta settings', 'dro-pizza'),
+        'description' => esc_html__('Show or hide meta content : posted , author, categories, tags and comments', 'dro-pizza'),
+        'panel' => '',
+        'priority' => 160,
+        'cabability' => 'edit_theme_options'
+    ));
+    // Posted On , Author
+    $wp_customize->add_setting('dro_pizza_postedon_status', array(
+        'default' => $default['dro_pizza_postedon_status'],
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'dro_pizza_sanitize_checkbox',
+            )
+    );
+    $wp_customize->add_control('dro_pizza_postedon_status', array(
+        'label' => esc_html__('Posted On , Author ', 'dro-pizza'),
+        'section' => 'meta_settings',
+        'type' => 'checkbox',
+        'priority' => 100
+            )
+    );    
+    // Tags 
+    $wp_customize->add_setting('dro_pizza_tags_status', array(
+        'default' => $default['dro_pizza_tags_status'],
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'dro_pizza_sanitize_checkbox',
+            )
+    );
+    $wp_customize->add_control('dro_pizza_tags_status', array(
+        'label' => esc_html__('Tags , Categories , Comments', 'dro-pizza'),
+        'section' => 'meta_settings',
+        'type' => 'checkbox',
+        'priority' => 100
+            )
+    );
+    
     
 } 
 
@@ -87,3 +129,65 @@ function dro_pizza_customize_preview_js() {
 }
 
 add_action('customize_preview_init', 'dro_pizza_customize_preview_js');
+
+/**
+ * @param bool $checked Whether the checkbox is checked.
+ *
+ * @return bool Whether the checkbox is checked.
+ */
+if (!function_exists('dro_pizza_sanitize_checkbox')):
+
+    function dro_pizza_sanitize_checkbox($checked) {
+        return ( ( isset($checked) && true === $checked ) ? true : false );
+    }
+
+endif;
+
+if (!function_exists('dro_pizza_default_meta_options')):
+
+    function dro_pizza_default_meta_options() {
+
+        $defaults = array();
+        $defaults['dro_pizza_postedon_status'] = false;
+        $defaults['dro_pizza_tags_status'] = false;
+
+
+        return $defaults;
+    }
+
+endif;
+
+/**
+ * Get theme option.
+ * @param string $key Option key.
+ * @return mixed Option value.
+ */
+if (!function_exists('dro_pizza_get_option')) :
+
+    function dro_pizza_get_option($key) {
+
+        if (empty($key)) {
+
+            return;
+        }
+        $value = '';
+        $default = dro_pizza_default_meta_options();
+        $default_value = null;
+        if (is_array($default) && isset($default[$key])) {
+
+            $default_value = $default[$key];
+        }
+        if (null !== $default_value) {
+
+            $value = get_theme_mod($key, $default_value);
+        } else {
+            $value = get_theme_mod($key);
+        }
+
+        return $value;
+    }
+
+
+
+
+endif;

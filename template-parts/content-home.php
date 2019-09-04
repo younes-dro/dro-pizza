@@ -23,7 +23,8 @@
                 the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
             endif;
 
-            if ('post' === get_post_type()) :
+            $dro_pizza_postedon_status  = dro_pizza_get_option('dro_pizza_postedon_status');
+            if ('post' === get_post_type() && $dro_pizza_postedon_status) :
                 ?>
                 <div class="entry-meta">
                     <?php
@@ -47,10 +48,12 @@
                title="<?php esc_attr(the_title())?>" 
                class="continue-reading"><?php esc_html_e('Continue Reading', 'dro-pizza')?>
             </a>
+            <?php if ( dro_pizza_get_option('dro_pizza_tags_status') ) :?>
             <span class="open-meta-tags"></span>
             <div class="meta-infos" style="display: none">
                 <?php dro_pizza_entry_footer(); ?>
             </div>
+            <?php  endif; ?>
         </footer><!-- .entry-footer -->
     </article><!-- #post-<?php the_ID(); ?> -->
 </div><!-- .col-12 col-md-6 col-lg-4 -->
