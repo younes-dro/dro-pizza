@@ -1,4 +1,4 @@
-$color__background-body: #344759;
+$color__background-body: #000;
 $color__background-header-from: #ff8a00;
 $color__background-header-to: #da1b60 ;
 $color__background-screen: #f1f1f1;
@@ -6,9 +6,12 @@ $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
-
+$color__background-article: #4e6276;
+$color__background-overlay: hsla(0, 0%, 0%, 0.8);
 $color__background-site-title-start: #f00; 
 $color__background-site-title-end: #630000;
+$color__background-open-meta-tags:#101213;
+$color__background-tags-links: #576c81;
 
 $color__entry-meta-link:#ccc;
 
@@ -19,6 +22,17 @@ $color__link: royalblue;
 $color__link-visited: #fff;
 $color__link-hover: midnightblue;
 $color__text-main: #404040;
+$color__text-entry-header: #fff;
+$color__text-entry-header-link:#fff;
+$color__text-entry-header-link-hover: #f1f1f1;
+$color__text-continue-reading: #ddd;
+$color__text-continue-reading-hover: #fff;
+$color__text-cats-links: #c3c2c2;
+$color__text-cats-links-hover: #fff;
+$color__text-tags-links: #ddd;
+$color__background-tags-links-hover: #fff;
+$color__text-comments-links: #ddd;
+$color__text-comments-links-hover: #fff;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
