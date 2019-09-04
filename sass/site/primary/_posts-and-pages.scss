@@ -100,7 +100,7 @@ body.home article{
         font-size: .8rem;
         position: relative;
         @media screen and (min-width: 992px){
-            /*font-size:1rem;*/
+            font-size:1rem;
         }
         a.continue-reading{
             color: $color__text-continue-reading;
@@ -110,6 +110,7 @@ body.home article{
             padding-bottom: 10px;
             text-align: center;
             margin-bottom: 10px;
+            font-size:.8rem;
             &:hover{
                 /*background-color: #d53428;*/
                 color: $color__text-continue-reading-hover;
