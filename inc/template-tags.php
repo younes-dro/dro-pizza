@@ -146,3 +146,15 @@ if ( ! function_exists( 'dro_pizza_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+if ( ! function_exists( 'dro_pizza_posts_pagination' ) ):
+        /**
+         * Display the pagination Index and Archive pages .
+         */
+        function dro_pizza_posts_pagination(){
+            the_posts_pagination(array(
+                'prev_text' => '<span><i class="ion ion-ios-arrow-left"></i></span>',
+                'next_text' => '<span><i class="ion ion-ios-arrow-right"></i></span>'
+            ));
+        }
+endif;
