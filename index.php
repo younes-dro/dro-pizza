@@ -16,7 +16,7 @@ get_header();
 ?>
 <?php
     if(dro_pizza_sidebar_status( 'sidebar-1' )){
-            $col_count = 'col-lg-9';
+            $col_count = 'col-12 col-xl-9';
         }else{
             $col_count = 'col-lg-12';
         }
