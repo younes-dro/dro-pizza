@@ -146,13 +146,11 @@
     }
 }
 nav.pagination{
-    background-color: #101418;
     width: 100%;
     padding: 5px;
     display:block;
     text-align: center;
     .nav-links{
-        background-color: #1e1e1e;
         padding: 10px;
         .prev.page-numbers{
             @include pagination-home-archive();
@@ -164,7 +162,7 @@ nav.pagination{
             @include pagination-home-archive();
         }
         .page-numbers.current{
-            @include pagination-home-archive(#282828  , #fff);
+            @include pagination-home-archive(#000  , #fff);
         }
         .prev.page-numbers,
         .next.page-numbers,
