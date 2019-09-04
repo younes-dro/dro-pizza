@@ -74,8 +74,8 @@ if ( ! function_exists( 'dro_pizza_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
 			'width'       => 250,
+                        'height'      => 100,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
