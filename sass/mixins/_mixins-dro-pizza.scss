@@ -14,3 +14,15 @@
     font-weight: 100;
     margin-right: 5px;
 }
+// posts pagination in home archive pages 
+@mixin pagination-home-archive($background_color : #1e1e1e, $text_color: #ddd){
+    display: block;
+    width: 100%;
+    background-color: $background_color;
+    color: $text_color;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    padding: 0;
+    margin: 0 auto;
+}
