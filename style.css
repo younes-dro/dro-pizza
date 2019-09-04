@@ -814,6 +814,66 @@ a:hover, a:active {
   width: 50%;
 }
 
+nav.pagination {
+  background-color: #101418;
+  width: 100%;
+  padding: 5px;
+  display: block;
+}
+nav.pagination .nav-links {
+  background-color: #1e1e1e;
+  padding: 10px;
+}
+nav.pagination .nav-links .prev.page-numbers {
+  display: block;
+  width: 100%;
+  background-color: #1e1e1e;
+  color: #ddd;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  padding: 0;
+  margin: 0 auto;
+}
+nav.pagination .nav-links .next.page-numbers {
+  display: block;
+  width: 100%;
+  background-color: #1e1e1e;
+  color: #ddd;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  padding: 0;
+  margin: 0 auto;
+}
+nav.pagination .nav-links .page-numbers {
+  display: block;
+  width: 100%;
+  background-color: #1e1e1e;
+  color: #ddd;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  padding: 0;
+  margin: 0 auto;
+}
+nav.pagination .nav-links .page-numbers.current {
+  display: block;
+  width: 100%;
+  background-color: #4d4d4d;
+  color: #ddd;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  padding: 0;
+  margin: 0 auto;
+}
+nav.pagination .nav-links .prev.page-numbers:hover,
+nav.pagination .nav-links .next.page-numbers:hover,
+nav.pagination .nav-links .page-numbers:hover {
+  color: #fff;
+}
+
 /*--------------------------------------------------------------
 ## Mobile Menu
 --------------------------------------------------------------*/
