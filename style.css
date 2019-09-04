@@ -819,6 +819,7 @@ nav.pagination {
   width: 100%;
   padding: 5px;
   display: block;
+  text-align: center;
 }
 nav.pagination .nav-links {
   background-color: #1e1e1e;
@@ -835,6 +836,13 @@ nav.pagination .nav-links .prev.page-numbers {
   padding: 0;
   margin: 0 auto;
 }
+@media screen and (min-width: 768px) {
+  nav.pagination .nav-links .prev.page-numbers {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+  }
+}
 nav.pagination .nav-links .next.page-numbers {
   display: block;
   width: 100%;
@@ -845,6 +853,13 @@ nav.pagination .nav-links .next.page-numbers {
   line-height: 45px;
   padding: 0;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  nav.pagination .nav-links .next.page-numbers {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+  }
 }
 nav.pagination .nav-links .page-numbers {
   display: block;
@@ -857,21 +872,36 @@ nav.pagination .nav-links .page-numbers {
   padding: 0;
   margin: 0 auto;
 }
+@media screen and (min-width: 768px) {
+  nav.pagination .nav-links .page-numbers {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+  }
+}
 nav.pagination .nav-links .page-numbers.current {
   display: block;
   width: 100%;
-  background-color: #4d4d4d;
-  color: #ddd;
+  background-color: #282828;
+  color: #fff;
   height: 45px;
   text-align: center;
   line-height: 45px;
   padding: 0;
   margin: 0 auto;
 }
+@media screen and (min-width: 768px) {
+  nav.pagination .nav-links .page-numbers.current {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+  }
+}
 nav.pagination .nav-links .prev.page-numbers:hover,
 nav.pagination .nav-links .next.page-numbers:hover,
 nav.pagination .nav-links .page-numbers:hover {
   color: #fff;
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
