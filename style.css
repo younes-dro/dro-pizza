@@ -475,7 +475,7 @@ html {
 }
 
 body {
-  background: #344759;
+  background: #000;
   /* Fallback for when there is no custom background color defined. */
   color: #fff;
 }
@@ -1266,7 +1266,7 @@ body.home article .bg-overlay {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 body.home article header.entry-header {
   position: relative;
@@ -1354,7 +1354,7 @@ body.home article footer.entry-footer span.open-meta-tags {
   color: #ccc;
   font-family: "Ionicons";
   display: inline-block;
-  background-color: #576c81;
+  background-color: #101213;
   width: 100%;
   /* margin: 0 auto; */
   height: 45px;
