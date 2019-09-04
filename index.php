@@ -49,7 +49,7 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			dro_pizza_posts_pagination();
 
 		else :
 
