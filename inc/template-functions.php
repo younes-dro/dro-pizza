@@ -75,11 +75,6 @@ if ( !function_exists('dro_piza_get_excerpt')){
         
         $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
         
-        $excerpt .= '...<a class="continue-reading"'
-                . ' href="'.esc_url(get_permalink($post->ID)).'" '
-                . ' title="'.  esc_attr(get_the_title($post->ID)).'">'.  
-                esc_html__('Continue Reading', 'dro-pizza').'</a>';
-        
         return wp_kses($excerpt,'post');
     }
 }

@@ -102,6 +102,15 @@ body.home article{
         @media screen and (min-width: 992px){
             font-size:1rem;
         }
+    }
+    footer.entry-footer.open{
+        position: relative;
+    }
+    footer.entry-footer{
+        font-size: .8rem;
+        position: absolute;
+        width: 90%;
+        bottom:5px;
         a.continue-reading{
             color: $color__text-continue-reading;
             display: block;
@@ -122,16 +131,7 @@ body.home article{
                 display: inline-block;
                 margin-left: 5px;
             }
-        }
-    }
-    footer.entry-footer.open{
-        position: relative;
-    }
-    footer.entry-footer{
-        font-size: .8rem;
-        position: absolute;
-        width: 90%;
-        bottom:5px;
+        }        
         span.open-meta-tags{
             color: $color__entry-meta-link;
             font-family: "Ionicons";

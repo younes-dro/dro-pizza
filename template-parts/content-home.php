@@ -43,6 +43,10 @@
         </div><!-- .entry-content -->
 
         <footer class="entry-footer">
+            <a href="<?php esc_url(the_permalink())?>" 
+               title="<?php esc_attr(the_title())?>" 
+               class="continue-reading"><?php esc_html_e('Continue Reading', 'dro-pizza')?>
+            </a>
             <span class="open-meta-tags"></span>
             <div class="meta-infos" style="display: none">
                 <?php dro_pizza_entry_footer(); ?>
