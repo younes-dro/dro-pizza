@@ -17,7 +17,7 @@
 // posts pagination in home archive pages 
 @mixin pagination-home-archive($background_color : #1e1e1e, $text_color: #ddd){
     display: block;
-    width: 100%;
+    width: 50%;
     background-color: $background_color;
     color: $text_color;
     height: 45px;

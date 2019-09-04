@@ -162,7 +162,7 @@ nav.pagination{
             @include pagination-home-archive();
         }
         .page-numbers.current{
-            @include pagination-home-archive(#000  , #fff);
+            @include pagination-home-archive(#0b0b0b  , #fff);
         }
         .prev.page-numbers,
         .next.page-numbers,
