@@ -23,7 +23,7 @@ get_header();
 ?>
 <div class="<?php echo $col_count?>">
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main row">
+		<main id="main" class="site-main row justify-content-center">
 
 		<?php
 		if ( have_posts() ) :
