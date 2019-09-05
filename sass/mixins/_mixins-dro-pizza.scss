@@ -31,3 +31,15 @@
         height: 45px;
     }
 }
+// ionicons for sidebar 
+@mixin sidebar-title-icon($content){
+        .widget-title{
+            &::before{
+                font-family: "Ionicons";
+                content: $content;
+                display: inline-block;
+                margin: 0 10px 0 0;
+                /*font-size: 0.9rem*/
+            }
+        }    
+}
