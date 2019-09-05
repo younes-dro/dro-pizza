@@ -13,10 +13,9 @@ iframe,
 object {
     max-width: 100%;
 }
-/* Display the logo on top when mm is open*/
-.custom-logo-link.mm-open{
-    z-index: 9999;
-    max-width: 80px;
+
+.blured{
+    filter: blur(5px);
 }
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {

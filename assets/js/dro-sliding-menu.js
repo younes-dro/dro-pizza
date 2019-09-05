@@ -37,7 +37,7 @@
             droMenu.bodyOverlay.add(droMenu.wrapperControl).appendTo($(".site"));
         },
         createRightNavButton = function () {
-            droMenu.wrapperControl.find("li.page_item_has_children").each(function () {
+            droMenu.wrapperControl.find("li.page_item_has_children , li.menu-item-has-children").each(function () {
                 var rightNavButton = $("<span/>", {"class": "ion-ios-arrow-forward forward"});
                 rightNavButton.prependTo($(this));
             });
@@ -85,7 +85,7 @@
         openCurrentPage();
         droMenu.toggleControl.click(toggleMobileMenu);
         droMenu.bodyOverlay.click(toggleMobileMenu);
-        droMenu.wrapperControl.find("li.page_item_has_children > span").click(showSubMenu);
+        droMenu.wrapperControl.find("li.page_item_has_children, li.menu-item-has-children > span").click(showSubMenu);
         droMenu.wrapperControl.find("li.back > span").click(goBack);
     };
 })(jQuery);
