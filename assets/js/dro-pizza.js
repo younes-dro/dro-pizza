@@ -40,6 +40,18 @@
             $("svg, .site-branding , .site-content , .site-footer, #site-navigation").toggleClass('blured');
         }
     });
+    /**
+     * Masonry for widgets : width > 992;
+     */
+    $w = $(window).width();
+    if ($w < 1180) {
+        $('.widget-area').masonry({
+            // options...
+            itemSelector: '.widget',
+            columnWidth: 250
+        });
+    }
+    $(window).on('resize', function () {});
 })(jQuery);
 
 

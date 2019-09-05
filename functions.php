@@ -143,9 +143,13 @@ function dro_pizza_scripts() {
 
 	wp_enqueue_script( 'dro-pizza-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20190825', true );
 
-        wp_enqueue_script('dro-sliding-menu', get_template_directory_uri(). '/assets/js/dro-sliding-menu.js', array('jquery'), '20190901',true);
+        wp_enqueue_script( 'dro-sliding-menu', get_template_directory_uri(). '/assets/js/dro-sliding-menu.js', array('jquery'), '20190901',true );
         
-        wp_enqueue_script('dro-pizza', get_template_directory_uri().'/assets/js/dro-pizza.js', array('jquery'),'20190901',true);
+        if(dro_pizza_is_active_sidebar( 'sidebar-1' ) ){
+            wp_enqueue_script( 'masonry' );
+        }
+        
+        wp_enqueue_script( 'dro-pizza', get_template_directory_uri().'/assets/js/dro-pizza.js', array('jquery'),'20190901',true );
         
         
         

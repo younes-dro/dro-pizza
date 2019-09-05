@@ -1228,8 +1228,13 @@ aside.widget-area {
 }
 aside.widget-area .widget {
   margin: 0 0 1.5em;
-  /*border: 1px solid;*/
+  border: 1px solid #1e1e1e;
+  background-color: #000000;
+  padding: 5px 10px;
   /* Make sure select elements fit in widgets. */
+}
+aside.widget-area .widget img {
+  max-width: 40%;
 }
 aside.widget-area .widget .widget-title {
   font-size: 1.5rem;
