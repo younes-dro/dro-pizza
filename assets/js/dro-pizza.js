@@ -24,6 +24,16 @@
         });
         $(this).toggleClass('active');
     });
+    /**
+     * Aply Blur effect when the mobile menu is opned
+     */
+    $("#toggle-menu").on('click',function(){
+        if($(this).hasClass('open')){
+            $("svg, .top-header , .site-branding , .site-content , .site-footer").toggleClass('blured');
+        }else{
+            $("svg, .top-header , .site-branding , .site-content , .site-footer").toggleClass('blured');
+        }
+    });
 })(jQuery);
 
 
