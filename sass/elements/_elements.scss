@@ -12,6 +12,10 @@ body {
     background: $color__background-body; /* Fallback for when there is no custom background color defined. */
     color: #fff;
 }
+.top-header.zoom-in{
+    position: relative;
+    z-index: 999;
+}
 .top-header{
     background-color: #2a2d2f;
     min-height: 40px;

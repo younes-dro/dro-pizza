@@ -17,7 +17,7 @@
      * Show/ hide meta entry (Tags , Categories).
      */
     $(".open-meta-tags").on('click', function () {
-        $entryfooter = $(this).parent(); 
+        $entryfooter = $(this).parent();
         $(this).parent().parent().toggleClass('active').promise().done(function () {
             $(this).find('.meta-infos').slideToggle('fast');
             $entryfooter.toggleClass('open');
@@ -27,11 +27,17 @@
     /**
      * Aply Blur effect when the mobile menu is opned
      */
-    $("#toggle-menu").on('click',function(){
-        if($(this).hasClass('open')){
-            $("svg, .top-header , .site-branding , .site-content , .site-footer").toggleClass('blured');
-        }else{
-            $("svg, .top-header , .site-branding , .site-content , .site-footer").toggleClass('blured');
+    $("#toggle-menu").on('click', function () {
+        if ($(this).hasClass('open')) {
+            if ($(".top-header").length) {
+                $('.top-header').toggleClass('zoom-in');
+            }
+            $("svg, .site-branding , .site-content , .site-footer, #site-navigation").toggleClass('blured');
+        } else {
+            if ($(".top-header").length) {
+                $('.top-header').toggleClass('zoom-in');
+            }
+            $("svg, .site-branding , .site-content , .site-footer, #site-navigation").toggleClass('blured');
         }
     });
 })(jQuery);
