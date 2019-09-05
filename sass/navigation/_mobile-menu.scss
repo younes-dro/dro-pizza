@@ -7,11 +7,12 @@ body.wp_mm_enable{
     left: 0;
     width: 100%;
     height: 100%;
-    background: hsla(0, 0%, 0%, 0.6);
+    background: hsla(0, 0%, 0%, 0.9);
     z-index: 998;
     display: none;
     opacity: 0;
     transition: opacity 0.2s;
+    
 }
 .body_overlay.enabled{
     display: block;
@@ -27,7 +28,7 @@ body.wp_mm_enable{
     }
 }
 .wp_mm_wrapper{
-    height: calc(100vh - 40px);
+    height: calc(100vh - 100px);
     overflow-y: scroll;
     overflow-x: hidden;
     position: fixed;
@@ -40,7 +41,7 @@ body.wp_mm_enable{
     -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;
     transition: right 0.5s;
-    /*box-sh*/    
+    /*box-sh*/       
     ul.nav-menu{
         position: relative;
         display: none;
@@ -104,7 +105,14 @@ body.wp_mm_enable{
             }
         }
 
-    }
+    }/* ul.nav-menu*/
+    .current_page_item > a,
+    .current-menu-item > a,
+    .current_page_item > a:hover,
+        .current-menu-item > a:hover {
+        color: #313131;
+        border-left: 2px solid  #7ac1b7;
+    }    
 
 }
 span.forward{
@@ -118,11 +126,9 @@ span.left{
 #toggle-menu-container{
     position: absolute;
     z-index: 99999;
-    right: 0;
+    right: 0px;
     top: 0;
     height: 50px;
-    background: hsla(0, 0%, 0%, 0.60);
-    transition: width 1s;
 }
 #toggle-menu{
     cursor: pointer;
@@ -130,7 +136,7 @@ span.left{
     height: 45px;
     width: 45px;
     position: absolute;
-    right: 5px;
+    right: 10px;
     top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -201,6 +207,6 @@ span.left{
 }
 body.wp_mm_enable{
     @media screen and (min-width:992px){
-        overflow: visible;
+        /*overflow: visible;*/
     }
 }
