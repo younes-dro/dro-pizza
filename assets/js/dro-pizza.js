@@ -27,7 +27,7 @@
     /**
      * Aply Blur effect when the mobile menu is opned
      */
-    $("#toggle-menu").on('click', function () {
+    $("#toggle-menu, .body_overlay").on('click', function () {
         if ($(this).hasClass('open')) {
             if ($(".top-header").length) {
                 $('.top-header').toggleClass('zoom-in');
