@@ -48,25 +48,30 @@ aside.widget-area{
                 }
             }
         }
-
         /* Make sure select elements fit in widgets. */
         select {
-            max-width: 100%;
+            max-width: 200px;
         }
     } /* .widget*/
+    .widget_calendar {
+        a{
+            background-color: #4e6276;
+            color: #fff;
+        }
+    }    
     $widgets : (
-    "archive":"\f134",
-    "tag_cloud":"\f377",
-    "categories":"\f26c", 
-    "search":"\f4a5", 
-    "calendar":"\f3f4",
-    "recent_comments":"\f11e",
-    "text":"\f12e", 
-    "nav_menu":"\f394", 
-    "recent_entries":"\f37e", 
-    "meta":"\f48d",
-    "pages":"\f381") ;
-    
+        "archive":"\f134",
+        "tag_cloud":"\f377",
+        "categories":"\f26c", 
+        "search":"\f4a5", 
+        "calendar":"\f3f4",
+        "recent_comments":"\f11e",
+        "text":"\f12e", 
+        "nav_menu":"\f394", 
+        "recent_entries":"\f37e", 
+        "meta":"\f48d",
+        "pages":"\f381") ;
+
     @each $widget , $glyph in $widgets{
         .widget_#{$widget}{
             @include sidebar-title-icon($glyph);
