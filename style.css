@@ -1276,7 +1276,11 @@ aside.widget-area .widget ul li a:hover {
   color: #fff;
 }
 aside.widget-area .widget select {
-  max-width: 100%;
+  max-width: 200px;
+}
+aside.widget-area .widget_calendar a {
+  background-color: #4e6276;
+  color: #fff;
 }
 aside.widget-area .widget_archive .widget-title::before {
   font-family: "Ionicons";
