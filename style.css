@@ -1241,7 +1241,7 @@ aside.widget-area .widget .widget-title {
   margin: 0 0 10px;
   /*border-bottom: 2px dotted;*/
   /*padding: 0 0 0 10px;*/
-  color: #fff;
+  color: #FE8703;
   display: inline-block;
   /* border-color: #ffffff; */
 }
@@ -1283,77 +1283,77 @@ aside.widget-area .widget_archive .widget-title::before {
   content: "";
   display: inline-block;
   margin: 0 10px 0 0;
-  /*font-size: 0.9rem*/
+  color: #FE8802;
 }
 aside.widget-area .widget_tag_cloud .widget-title::before {
   font-family: "Ionicons";
   content: "";
   display: inline-block;
   margin: 0 10px 0 0;
-  /*font-size: 0.9rem*/
+  color: #FE8802;
 }
 aside.widget-area .widget_categories .widget-title::before {
   font-family: "Ionicons";
   content: "";
   display: inline-block;
   margin: 0 10px 0 0;
-  /*font-size: 0.9rem*/
+  color: #FE8802;
 }
 aside.widget-area .widget_search .widget-title::before {
   font-family: "Ionicons";
   content: "";
   display: inline-block;
   margin: 0 10px 0 0;
-  /*font-size: 0.9rem*/
+  color: #FE8802;
 }
 aside.widget-area .widget_calendar .widget-title::before {
   font-family: "Ionicons";
   content: "";
   display: inline-block;
   margin: 0 10px 0 0;
-  /*font-size: 0.9rem*/
+  color: #FE8802;
 }
 aside.widget-area .widget_recent_comments .widget-title::before {
   font-family: "Ionicons";
   content: "";
   display: inline-block;
   margin: 0 10px 0 0;
-  /*font-size: 0.9rem*/
+  color: #FE8802;
 }
 aside.widget-area .widget_text .widget-title::before {
   font-family: "Ionicons";
   content: "";
   display: inline-block;
   margin: 0 10px 0 0;
-  /*font-size: 0.9rem*/
+  color: #FE8802;
 }
 aside.widget-area .widget_nav_menu .widget-title::before {
   font-family: "Ionicons";
   content: "";
   display: inline-block;
   margin: 0 10px 0 0;
-  /*font-size: 0.9rem*/
+  color: #FE8802;
 }
 aside.widget-area .widget_recent_entries .widget-title::before {
   font-family: "Ionicons";
   content: "";
   display: inline-block;
   margin: 0 10px 0 0;
-  /*font-size: 0.9rem*/
+  color: #FE8802;
 }
 aside.widget-area .widget_meta .widget-title::before {
   font-family: "Ionicons";
   content: "";
   display: inline-block;
   margin: 0 10px 0 0;
-  /*font-size: 0.9rem*/
+  color: #FE8802;
 }
 aside.widget-area .widget_pages .widget-title::before {
   font-family: "Ionicons";
   content: "";
   display: inline-block;
   margin: 0 10px 0 0;
-  /*font-size: 0.9rem*/
+  color: #FE8802;
 }
 
 /*--------------------------------------------------------------
