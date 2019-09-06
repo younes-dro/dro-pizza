@@ -16,7 +16,7 @@
     /**
      * Show/ hide meta entry (Tags , Categories).
      */
-    $(".open-meta-tags").on('click', function () {
+    $('.open-meta-tags').on('click', function () {
         $entryfooter = $(this).parent();
         $(this).parent().parent().toggleClass('active').promise().done(function () {
             $(this).find('.meta-infos').slideToggle('fast');
@@ -27,31 +27,19 @@
     /**
      * Aply Blur effect when the mobile menu is opned
      */
-    $("#toggle-menu, .body_overlay").on('click', function () {
+    $('#toggle-menu, .body_overlay').on('click', function () {
         if ($(this).hasClass('open')) {
-            if ($(".top-header").length) {
+            if ($('.top-header').length) {
                 $('.top-header').toggleClass('zoom-in');
             }
-            $("svg, .site-branding , .site-content , .site-footer, #site-navigation").toggleClass('blured');
+            $('svg, .site-branding , .site-content , .site-footer, #site-navigation').toggleClass('blured');
         } else {
-            if ($(".top-header").length) {
+            if ($('.top-header').length) {
                 $('.top-header').toggleClass('zoom-in');
             }
-            $("svg, .site-branding , .site-content , .site-footer, #site-navigation").toggleClass('blured');
+            $('svg, .site-branding , .site-content , .site-footer, #site-navigation').toggleClass('blured');
         }
     });
-    /**
-     * Masonry for widgets : width > 992;
-     */
-    $w = $(window).width();
-    if ($w < 1180) {
-        $('.widget-area').masonry({
-            // options...
-            itemSelector: '.widget',
-            columnWidth: 250
-        });
-    }
-    $(window).on('resize', function () {});
 })(jQuery);
 
 
