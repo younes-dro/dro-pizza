@@ -18,7 +18,6 @@
         if ($(this).length === 0) { return this ;}
         var droMenu = {}, ds = $(this);
         var init = function () {
-            console.log('init mm');
             droMenu.settings = $.extend({}, defaults, options);
             createWrappers();
             createBackButton();
