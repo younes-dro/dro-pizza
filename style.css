@@ -543,6 +543,60 @@ svg {
   padding-bottom: 10px;
 }
 
+footer.site-footer .blog-name-footer {
+  background-color: #0e0e0e;
+  text-align: center;
+}
+footer.site-footer .blog-name-footer h3 {
+  font-size: 1.5rem;
+  padding: 40px 0;
+  color: #e0e0e0;
+}
+footer.site-footer .blog-name-footer h3::after, footer.site-footer .blog-name-footer h3::before {
+  font-family: "Ionicons";
+  content: "";
+  padding: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  footer.site-footer .blog-name-footer h3::after, footer.site-footer .blog-name-footer h3::before {
+    padding: 0 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer.site-footer .blog-name-footer h3 {
+    padding: 60px 0;
+    /*position: relative;*/
+    font-size: 54px;
+    font-weight: 400;
+  }
+}
+footer.site-footer .site-info {
+  background-color: #000;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  color: #848d95;
+}
+footer.site-footer .site-info a.custom-logo-link {
+  display: block;
+  position: initial;
+  /* background-color: aliceblue; */
+  max-width: 100%;
+}
+footer.site-footer .site-info a.custom-logo-link img {
+  max-width: 100px;
+}
+footer.site-footer .site-info a {
+  color: #848d95;
+  padding: 4px 0;
+  line-height: 1.5;
+  display: inline-block;
+  text-decoration: none;
+}
+footer.site-footer .site-info a:hover {
+  color: #bbc0c4;
+}
 hr {
   background-color: #ccc;
   border: 0;
@@ -1241,6 +1295,7 @@ aside.widget-area .widget .widget-title {
   margin: 0 0 10px;
   /*border-bottom: 2px dotted;*/
   /*padding: 0 0 0 10px;*/
+  font-family: "Roboto-Regular";
   color: #FE8703;
   display: inline-block;
   /* border-color: #ffffff; */
