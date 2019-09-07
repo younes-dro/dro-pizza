@@ -66,6 +66,62 @@ svg{
     padding-top: 10px;
     padding-bottom: 10px;    
 }
+footer.site-footer{
+    .blog-name-footer{
+        background-color: $color__background-blogname-footer;
+        text-align: center;
+        h3{
+            font-size: 1.50rem;
+            padding: 40px 0;
+            color: #e0e0e0;
+            &::after,&::before{
+                font-family: "Ionicons";
+                content: "\f2a8";
+                padding: 0 20px;
+                @media screen and (min-width: 768px){
+                    padding: 0 30px;
+                }
+            }
+            @media screen and (min-width: 768px){
+                padding: 60px 0;
+                /*position: relative;*/
+                font-size: 54px;
+                font-weight: 400;
+            }
+        }
+    }
+    .site-info{
+        background-color: $color__background-info-footer;
+        padding: 10px 0;
+        text-align: center;
+        font-size: .8rem;
+        font-family: sans-serif;
+        color:#848d95;
+        a.custom-logo-link{
+            display: block;
+            position: initial;
+            /* background-color: aliceblue; */
+            max-width: 100%;
+            img{
+                max-width: 100px;
+            }
+        }
+        a{
+            color:#848d95;
+            padding: 4px 0;
+            line-height: 1.5;
+            display: inline-block;
+            text-decoration: none;
+            &:hover{
+                color: #bbc0c4;
+            }
+        }
+        span{
+
+        }
+    }
+
+}
 hr {
     background-color: $color__background-hr;
     border: 0;
