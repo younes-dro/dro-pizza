@@ -26,77 +26,145 @@ function dro_pizza_customize_register($wp_customize) {
             'render_callback' => 'dro_pizza_customize_partial_blogdescription',
         ));
     }
-    // Retrive the defaults values
-    $default = dro_pizza_default_meta_options();
+    // Retreive the defaults values
+    $defaults = dro_pizza_default_meta_options();
+    
+    $wp_customize->add_panel('dro_pizza_panel', array(
+        'title' => esc_html__('Dro Pizza Options', 'dro-pizza'),
+        'descritption' => esc_html__('Theme Options', 'dro-pizza')
+    ));
     
     /**
      * Contact details section
      */
-    $wp_customize->add_section('contact_infos', array(
-        'title' => esc_html__('Contact infos', 'dro-pizza'),
+    $wp_customize->add_section('dro_pizza_contact_infos', array(
+        'title' => esc_html__('Contact Infos', 'dro-pizza'),
         'description' => esc_html__('Address and delivery phone numbers', 'dro-pizza'),
-        'panel' => '',
+        'panel' => 'dro_pizza_panel',
         'priority' => 160,
         'capability' => 'edit_theme_options'
     ));
-    $wp_customize->add_setting('adress_infos', array(
+    // Adress
+    $wp_customize->add_setting('dro_pizza_adress_infos', array(
         'type' => 'theme_mod',
+        'default' => 'Adress',
         'capability' => 'edit_theme_options',
         'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
-    $wp_customize->add_control('adress_infos', array(
+    $wp_customize->add_control('dro_pizza_adress_infos', array(
         'label' => esc_html__('Adress', 'dro-pizza'),
         'type' => 'textarea',
-        'section' => 'contact_infos'
+        'section' => 'dro_pizza_contact_infos'
     ));
-    $wp_customize->add_setting('phone_infos', array(
+    // Phone
+    $wp_customize->add_setting('dro_pizza_phone_infos', array(
         'type' => 'theme_mod',
         'capability' => 'edit_theme_options',
         'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
-    $wp_customize->add_control('phone_infos', array(
+    $wp_customize->add_control('dro_pizza_phone_infos', array(
         'label' => esc_html__('Delivery phone numbers', 'dro-pizza'),
         'type' => 'text',
-        'section' => 'contact_infos'
+        'section' => 'dro_pizza_contact_infos'
     ));
     /**
-     * meta settings section
+     * Meta options section
      */
-    $wp_customize->add_section('meta_settings', array(
-        'title' => esc_html__('Content meta settings', 'dro-pizza'),
+    $wp_customize->add_section('dro_pizza_meta_settings', array(
+        'title' => esc_html__('Meta Options', 'dro-pizza'),
         'description' => esc_html__('Show or hide meta content : posted , author, categories, tags and comments', 'dro-pizza'),
-        'panel' => '',
+        'panel' => 'dro_pizza_panel',
         'priority' => 160,
         'cabability' => 'edit_theme_options'
     ));
     // Posted On , Author
     $wp_customize->add_setting('dro_pizza_postedon_status', array(
-        'default' => $default['dro_pizza_postedon_status'],
+        'default' => $defaults['dro_pizza_postedon_status'],
         'capability' => 'edit_theme_options',
         'sanitize_callback' => 'dro_pizza_sanitize_checkbox',
             )
     );
     $wp_customize->add_control('dro_pizza_postedon_status', array(
         'label' => esc_html__('Posted On , Author ', 'dro-pizza'),
-        'section' => 'meta_settings',
+        'section' => 'dro_pizza_meta_settings',
         'type' => 'checkbox',
         'priority' => 100
             )
     );    
     // Tags 
     $wp_customize->add_setting('dro_pizza_tags_status', array(
-        'default' => $default['dro_pizza_tags_status'],
+        'default' => $defaults['dro_pizza_tags_status'],
         'capability' => 'edit_theme_options',
-        'sanitize_callback' => 'dro_pizza_sanitize_checkbox',
+        'sanitize_callback' => 'dro_pizza_sanitize_checkbox'
             )
     );
     $wp_customize->add_control('dro_pizza_tags_status', array(
         'label' => esc_html__('Tags , Categories , Comments', 'dro-pizza'),
-        'section' => 'meta_settings',
+        'section' => 'dro_pizza_meta_settings',
         'type' => 'checkbox',
         'priority' => 100
             )
     );
+    /**
+     * Footer section
+     */
+    $wp_customize->add_section('dro_pizza_footer_options', array(
+        'title' => esc_html__('Footer Options', 'dro-pizza'),
+        'description' => esc_html__('Customise the footer area', 'dro-pizza'),
+        'panel' => 'dro_pizza_panel',
+        'priority' => 160,
+        'capability' => 'edit_theme_options'
+    ));
+     // Display / Hide logo 
+    $wp_customize->add_setting('dro_pizza_footer_logo', array(
+        'default' => $defaults['dro_pizza_footer_logo'],
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'dro_pizza_sanitize_checkbox'
+    ));
+    $wp_customize->add_control('dro_pizza_footer_logo', array(
+        'label' => esc_html__('Display the logo.', 'dro-pizza'),
+        'section' => 'dro_pizza_footer_options',
+        'type' => 'checkbox',
+        'priority' => 100
+    ));
+    // Display / Hide logo
+    $wp_customize->add_setting('dro_pizza_footer_blogname', array(
+        'default' => $defaults['dro_pizza_footer_blogname'],
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'dro_pizza_sanitize_checkbox'
+    ));
+    
+    $wp_customize->add_control('dro_pizza_footer_blogname', array(
+        'label' => esc_html__('Display the Blog Name.', 'dro-pizza'),
+        'section' => 'dro_pizza_footer_options',
+        'type' => 'checkbox',
+        'priority' => 100
+    ));
+    // Copyright link
+    $wp_customize->add_setting('dro_pizza_copyright_link', array(
+        'sanitize_callback' => 'esc_url_raw',
+        'cabability' => 'edit_theme_options'
+    ));
+    $wp_customize->add_control('dro_pizza_copyright_link', array(
+        'label' => esc_html__('Copyright link', 'dro-pizza'),
+        'description' => esc_html__('e.g: http://example.com','dro-pizza'),
+        'section' => 'dro_pizza_footer_options',
+        'type' => 'url',
+        'priority' => 100
+    ));
+    // Copyright text
+    $wp_customize->add_setting('dro_pizza_copyright_text', array(
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
+    ));
+    $wp_customize->add_control('dro_pizza_copyright_text', array(
+        'label' => esc_html__('Copyright text', 'dro-pizza'),
+        'description' =>esc_html__('e.g: Proudly powered by WordPress','dro-pizza'),
+        'type' => 'text',
+        'section' => 'dro_pizza_footer_options',
+        'priority' => 100
+    ));    
     
     
 } 
@@ -150,6 +218,8 @@ if (!function_exists('dro_pizza_default_meta_options')):
         $defaults = array();
         $defaults['dro_pizza_postedon_status'] = false;
         $defaults['dro_pizza_tags_status'] = false;
+        $defaults['dro_pizza_footer_logo'] = false;
+        $defaults['dro_pizza_footer_blogname'] = false;
 
 
         return $defaults;
