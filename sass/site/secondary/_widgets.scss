@@ -1,11 +1,20 @@
 aside.widget-area{
-    /*background-color: #4e6276;*/
     padding: 5px;
     .widget {
         margin: 0 0 1.5em;
         border: 1px solid #1e1e1e;
         background-color: #000000;
         padding: 5px 10px;
+        a{
+            color: $color__text-continue-reading;
+            display: inline-block;
+            min-height: 45px;
+            padding: 0;
+            margin: 0;
+            &:hover{
+                color: $color__text-continue-reading-hover;
+            }
+        }        
         img{
             max-width: 40%;
         }
@@ -37,16 +46,6 @@ aside.widget-area{
                         /*                        font-size: .7rem;*/
                     }
                 }
-                a{
-                    color: $color__text-continue-reading;
-                    display: inline-block;
-                    min-height: 45px;
-                    padding: 0;
-                    margin: 0;
-                    &:hover{
-                        color: $color__text-continue-reading-hover;
-                    }
-                }
             }
         }
         /* Make sure select elements fit in widgets. */
@@ -59,7 +58,7 @@ aside.widget-area{
             background-color: #4e6276;
             color: #fff;
         }
-    }    
+    }
     $widgets : (
         "archive":"\f134",
         "tag_cloud":"\f377",
@@ -78,4 +77,5 @@ aside.widget-area{
             @include sidebar-title-icon($glyph);
         }
     }
+
 }
