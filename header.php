@@ -24,8 +24,8 @@
             <div class="container-fluid">
                 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'dro-pizza'); ?></a>
                 <?php
-                $adress_infos = get_theme_mod('adress_infos');
-                $phone_infos = get_theme_mod('phone_infos');
+                $adress_infos = get_theme_mod('dro_pizza_adress_infos');
+                $phone_infos = get_theme_mod('dro_pizza_phone_infos');
                 if (!empty(trim($adress_infos)) || !empty(trim($phone_infos))):
                     ?>
                     <div class = "row justify-content-center top-header">
