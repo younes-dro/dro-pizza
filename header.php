@@ -65,17 +65,14 @@
                                 ?>
                             </nav><!-- #site-navigation -->
 
-                            <?php
-                            $headerImage = get_header_image();
-//                            echo $headerImage;
-                            ?>
-
-                            <div class="site-branding" style="background-image: url(<?php echo $headerImage ?>)">
+                            <?php if(is_home() || is_front_page()):
+                                ?>
+                            <div class="site-branding" style="background-image: url(<?php echo esc_url(get_header_image()) ?>)">
+                            <?php else: ?>
+                                <div class="site-branding">
+                            <?php endif ?>
                                 <?php
                                 the_custom_logo();
-//                                echo '<pre>';
-//                                var_dump(get_bloginfo('name'));
-//                                echo '</pre>';
                                 if (get_bloginfo('name') || is_customize_preview()) :
                                     ?>
                                     <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
