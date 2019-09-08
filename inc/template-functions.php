@@ -12,14 +12,14 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function dro_pizza_body_classes($classes) {
+function dro_pizza_body_classes( $classes ) {
     // Adds a class of hfeed to non-singular pages.
     if (!is_singular()) {
         $classes[] = 'hfeed';
     }
 
     // Adds a class of no-sidebar when there is no sidebar present.
-    if (!is_active_sidebar('sidebar-1')) {
+    if (!is_active_sidebar( 'sidebar-1' ) ) {
         $classes[] = 'no-sidebar';
     }
 
@@ -39,7 +39,24 @@ function dro_pizza_pingback_header() {
 
 add_action('wp_head', 'dro_pizza_pingback_header');
 
-if (!function_exists('dro_pizza_sidebar_status')) {
+if ( !function_exists( 'dro_pizza_image_header' ) ){
+    /**
+     * Return the background image for header
+     */
+    function dro_pizza_image_header(){
+        
+        if(is_home() || is_front_page()):
+            return get_header_image();
+        endif;
+        if( is_single() ):
+            return get_the_post_thumbnail_url();
+        endif;
+        
+        return FALSE;
+    }
+}
+
+if ( !function_exists( 'dro_pizza_sidebar_status' ) ) {
     /*
      * Whether a sidebar is in use
      */

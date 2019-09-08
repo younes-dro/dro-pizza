@@ -65,9 +65,12 @@
                                 ?>
                             </nav><!-- #site-navigation -->
 
-                            <?php if(is_home() || is_front_page()):
-                                ?>
-                            <div class="site-branding" style="background-image: url(<?php echo esc_url(get_header_image()) ?>)">
+                            <?php 
+                            $background_image_header = dro_pizza_image_header();
+                            if( $background_image_header):
+                            ?>
+                            <div class="site-branding" style="background-image: url(<?php echo esc_url( $background_image_header ) ?>)">
+                                <div class="bg-overlay"></div>
                             <?php else: ?>
                                 <div class="site-branding">
                             <?php endif ?>
