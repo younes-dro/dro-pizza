@@ -27,7 +27,8 @@
 body.home article.active{
     height: auto;
 }
-body.home article{
+body.home article,
+body.archive article{
     background-color: $color__background-article;
     min-height: 300px;
     padding: 10px 10px 0 10px;
