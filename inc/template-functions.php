@@ -98,4 +98,15 @@ if (!function_exists('dro_pizza_is_active_sidebar')) {
     }
 
 }
+/**
+ * Remove archive title prefixes.
+ *
+ * @param  string  $title  The archive title from get_the_archive_title();
+ * @return string          The cleaned title.
+ */
+function dro_pizza_custom_archive_title( $title ) {
+	// Remove any HTML, words, digits, and spaces before the title.
+	return preg_replace( '#^[\w\d\s]+:\s*#', '', strip_tags( $title ) );
+}
+add_filter( 'get_the_archive_title', 'dro_pizza_custom_archive_title' );
 
