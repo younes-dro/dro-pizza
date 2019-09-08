@@ -64,8 +64,11 @@ svg{
 }
 
 .site-content{
-    padding: 70px 0;
+    padding:0;
     .site-main{    
+    }
+    @media screen and (min-width:768px){
+        padding-top:50px;
     }
 }
 footer.site-footer{

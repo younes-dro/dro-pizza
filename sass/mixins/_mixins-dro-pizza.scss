@@ -31,15 +31,28 @@
         height: 45px;
     }
 }
-// ionicons for sidebar 
+// Ionicons for sidebar 
 @mixin sidebar-title-icon($content){
-        .widget-title{
-            &::before{
-                font-family: "Ionicons";
-                content: $content;
-                display: inline-block;
-                margin: 0 10px 0 0;
-                color: #FE8802;
-            }
-        }    
+    .widget-title{
+        &::before{
+            font-family: "Ionicons";
+            content: $content;
+            display: inline-block;
+            margin: 0 10px 0 0;
+            color: #FE8802;
+        }
+    }    
+}
+// Ionicons for archive page-title
+@mixin archive-page-title-icon($content){
+    h1.page-title{
+        color: $color__text-widget-title;
+        &::before{
+            font-family: "Ionicons";
+            content: $content;
+            display: inline-block;
+            margin: 0 10px 0 0;
+            color: $color__text-widget-title;
+        }
+    }
 }

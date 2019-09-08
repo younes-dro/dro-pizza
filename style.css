@@ -539,8 +539,14 @@ svg {
 }
 
 .site-content {
-  padding: 70px 0;
+  padding: 0;
 }
+@media screen and (min-width: 768px) {
+  .site-content {
+    padding-top: 50px;
+  }
+}
+
 footer.site-footer .blog-name-footer {
   background-color: #0e0e0e;
   text-align: center;
@@ -1448,7 +1454,7 @@ aside.widget-area .wp-caption .wp-caption-text {
 ## Site title and Tagline 
 --------------------------------------------------------------*/
 div.site-branding {
-  background: radial-gradient(circle at top right, #3f6e79, #0f0e16);
+  background: radial-gradient(circle at top right, #000000, #211d18);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1543,25 +1549,25 @@ div.site-branding P.site-description {
   margin: 0 0 1.5em;
 }
 
-/*
-* 
-*/
 body.home article.active {
   height: auto;
 }
 
-body.home article {
+body.home article,
+body.archive article {
   background-color: #4e6276;
   min-height: 300px;
   padding: 10px 10px 0 10px;
   position: relative;
 }
 @media screen and (min-width: 992px) {
-  body.home article {
+  body.home article,
+body.archive article {
     min-height: 320px;
   }
 }
-body.home article .bg-image {
+body.home article .bg-image,
+body.archive article .bg-image {
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1571,7 +1577,8 @@ body.home article .bg-image {
   top: 0;
   left: 0;
 }
-body.home article .bg-overlay {
+body.home article .bg-overlay,
+body.archive article .bg-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -1579,69 +1586,84 @@ body.home article .bg-overlay {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
 }
-body.home article header.entry-header {
+body.home article header.entry-header,
+body.archive article header.entry-header {
   position: relative;
   /* .entry-title */
 }
-body.home article header.entry-header h2.entry-title {
+body.home article header.entry-header h2.entry-title,
+body.archive article header.entry-header h2.entry-title {
   font-size: 1.1rem;
   color: #fff;
 }
-body.home article header.entry-header h2.entry-title a {
+body.home article header.entry-header h2.entry-title a,
+body.archive article header.entry-header h2.entry-title a {
   color: #fff;
   letter-spacing: 0.6px;
 }
-body.home article header.entry-header h2.entry-title a:hover {
+body.home article header.entry-header h2.entry-title a:hover,
+body.archive article header.entry-header h2.entry-title a:hover {
   text-decoration: none;
   color: #f1f1f1;
 }
 @media screen and (min-width: 768px) {
-  body.home article header.entry-header h2.entry-title {
+  body.home article header.entry-header h2.entry-title,
+body.archive article header.entry-header h2.entry-title {
     font-size: 1.5rem;
   }
 }
-body.home article div.entry-meta {
+body.home article div.entry-meta,
+body.archive article div.entry-meta {
   font-size: 0.8rem;
 }
-body.home article div.entry-meta span.posted-on a {
+body.home article div.entry-meta span.posted-on a,
+body.archive article div.entry-meta span.posted-on a {
   color: #ccc;
 }
-body.home article div.entry-meta span.posted-on a:before {
+body.home article div.entry-meta span.posted-on a:before,
+body.archive article div.entry-meta span.posted-on a:before {
   display: inline-block;
   font-family: "Ionicons";
   content: "";
   font-weight: 100;
   margin-right: 5px;
 }
-body.home article div.entry-meta span.byline span.author a {
+body.home article div.entry-meta span.byline span.author a,
+body.archive article div.entry-meta span.byline span.author a {
   color: #ccc;
 }
-body.home article div.entry-meta span.byline span.author a:before {
+body.home article div.entry-meta span.byline span.author a:before,
+body.archive article div.entry-meta span.byline span.author a:before {
   display: inline-block;
   font-family: "Ionicons";
   content: "";
   font-weight: 100;
   margin-right: 5px;
 }
-body.home article .entry-content {
+body.home article .entry-content,
+body.archive article .entry-content {
   font-size: 0.8rem;
   position: relative;
 }
 @media screen and (min-width: 992px) {
-  body.home article .entry-content {
+  body.home article .entry-content,
+body.archive article .entry-content {
     font-size: 1rem;
   }
 }
-body.home article footer.entry-footer.open {
+body.home article footer.entry-footer.open,
+body.archive article footer.entry-footer.open {
   position: relative;
 }
-body.home article footer.entry-footer {
+body.home article footer.entry-footer,
+body.archive article footer.entry-footer {
   font-size: 0.8rem;
   position: absolute;
   width: 90%;
   bottom: 5px;
 }
-body.home article footer.entry-footer a.continue-reading {
+body.home article footer.entry-footer a.continue-reading,
+body.archive article footer.entry-footer a.continue-reading {
   color: #ddd;
   display: block;
   /*background-color: #F44336;*/
@@ -1651,18 +1673,21 @@ body.home article footer.entry-footer a.continue-reading {
   margin-bottom: 10px;
   font-size: 0.8rem;
 }
-body.home article footer.entry-footer a.continue-reading:hover {
+body.home article footer.entry-footer a.continue-reading:hover,
+body.archive article footer.entry-footer a.continue-reading:hover {
   /*background-color: #d53428;*/
   color: #fff;
   text-decoration: none;
 }
-body.home article footer.entry-footer a.continue-reading:after {
+body.home article footer.entry-footer a.continue-reading:after,
+body.archive article footer.entry-footer a.continue-reading:after {
   font-family: "Font Awesome 5 Free";
   content: "";
   display: inline-block;
   margin-left: 5px;
 }
-body.home article footer.entry-footer span.open-meta-tags {
+body.home article footer.entry-footer span.open-meta-tags,
+body.archive article footer.entry-footer span.open-meta-tags {
   color: #ccc;
   font-family: "Ionicons";
   display: inline-block;
@@ -1676,23 +1701,28 @@ body.home article footer.entry-footer span.open-meta-tags {
   border-radius: 50%;
   text-align: center;
 }
-body.home article footer.entry-footer span.open-meta-tags:after {
+body.home article footer.entry-footer span.open-meta-tags:after,
+body.archive article footer.entry-footer span.open-meta-tags:after {
   display: block;
   margin: 0 auto;
   width: 10px;
   content: "";
 }
-body.home article footer.entry-footer span.open-meta-tags.active:after {
+body.home article footer.entry-footer span.open-meta-tags.active:after,
+body.archive article footer.entry-footer span.open-meta-tags.active:after {
   content: "";
 }
-body.home article footer.entry-footer .meta-infos {
+body.home article footer.entry-footer .meta-infos,
+body.archive article footer.entry-footer .meta-infos {
   padding-bottom: 10px;
 }
-body.home article footer.entry-footer .meta-infos span.cat-links {
+body.home article footer.entry-footer .meta-infos span.cat-links,
+body.archive article footer.entry-footer .meta-infos span.cat-links {
   display: block;
   margin-bottom: 5px;
 }
-body.home article footer.entry-footer .meta-infos span.cat-links a {
+body.home article footer.entry-footer .meta-infos span.cat-links a,
+body.archive article footer.entry-footer .meta-infos span.cat-links a {
   color: #c3c2c2;
   /* background-color: rgba(0, 0, 0, 0.38); */
   display: inline-block;
@@ -1700,29 +1730,35 @@ body.home article footer.entry-footer .meta-infos span.cat-links a {
   margin-bottom: 5px;
   text-decoration: underline;
 }
-body.home article footer.entry-footer .meta-infos span.cat-links a:hover {
+body.home article footer.entry-footer .meta-infos span.cat-links a:hover,
+body.archive article footer.entry-footer .meta-infos span.cat-links a:hover {
   color: #fff;
 }
-body.home article footer.entry-footer .meta-infos span.comments-link {
+body.home article footer.entry-footer .meta-infos span.comments-link,
+body.archive article footer.entry-footer .meta-infos span.comments-link {
   display: block;
   font-size: 1rem;
   font-family: sans-serif;
   height: 40px;
 }
-body.home article footer.entry-footer .meta-infos span.comments-link a {
+body.home article footer.entry-footer .meta-infos span.comments-link a,
+body.archive article footer.entry-footer .meta-infos span.comments-link a {
   font-family: sans-serif;
   color: #ddd;
 }
-body.home article footer.entry-footer .meta-infos span.comments-link a:hover {
+body.home article footer.entry-footer .meta-infos span.comments-link a:hover,
+body.archive article footer.entry-footer .meta-infos span.comments-link a:hover {
   text-decoration: none;
   color: #fff;
 }
-body.home article footer.entry-footer .meta-infos span.tags-links {
+body.home article footer.entry-footer .meta-infos span.tags-links,
+body.archive article footer.entry-footer .meta-infos span.tags-links {
   display: block;
   margin-top: 5px;
   margin-bottom: 5px;
 }
-body.home article footer.entry-footer .meta-infos span.tags-links a {
+body.home article footer.entry-footer .meta-infos span.tags-links a,
+body.archive article footer.entry-footer .meta-infos span.tags-links a {
   margin-left: 0.4rem;
   border-radius: 50%;
   background-color: #232323;
@@ -1733,8 +1769,41 @@ body.home article footer.entry-footer .meta-infos span.tags-links a {
   display: inline-block;
   margin: 5px;
 }
-body.home article footer.entry-footer .meta-infos span.tags-links:hover {
+body.home article footer.entry-footer .meta-infos span.tags-links:hover,
+body.archive article footer.entry-footer .meta-infos span.tags-links:hover {
   color: #fff;
+}
+
+body.category h1.page-title::before {
+  font-family: "Ionicons";
+  content: "";
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #FE8703;
+}
+
+body.author h1.page-title::before {
+  font-family: "Ionicons";
+  content: "";
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #FE8703;
+}
+
+body.tag h1.page-title::before {
+  font-family: "Ionicons";
+  content: "";
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #FE8703;
+}
+
+body.date h1.page-title::before {
+  font-family: "Ionicons";
+  content: "";
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #FE8703;
 }
 
 /*--------------------------------------------------------------

@@ -21,9 +21,7 @@
     clear: both;
     margin: 0 0 1.5em;
 }
-/*
-* 
-*/
+
 body.home article.active{
     height: auto;
 }
@@ -212,4 +210,12 @@ body.archive article{
         }
     }
 
+}
+
+$archives: ( "category":"\f26c" , "author":"\f47e","tag":"\f377" , "date":"\f3f4");
+
+@each $archive, $glyph in $archives{
+    body.#{$archive} {
+        @include archive-page-title-icon($glyph);
+    }
 }
