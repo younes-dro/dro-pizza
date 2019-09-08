@@ -965,6 +965,82 @@ nav.pagination .nav-links .page-numbers:hover {
   text-decoration: none;
 }
 
+.site-main .comment-navigation,
+.site-main .post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden;
+  margin: 0 0 1.5em;
+  overflow: hidden;
+  padding-bottom: 10px;
+  width: 100%;
+}
+.site-main .comment-navigation .nav-links,
+.site-main .post-navigation .nav-links {
+  margin-top: 10px;
+}
+.site-main .comment-navigation .nav-links .nav-previous,
+.site-main .comment-navigation .nav-links .nav-next,
+.site-main .post-navigation .nav-links .nav-previous,
+.site-main .post-navigation .nav-links .nav-next {
+  width: 100%;
+  text-align: center;
+  float: none;
+  background: #9e2520;
+  color: #fdb84e;
+  margin-bottom: 10px;
+}
+.site-main .comment-navigation .nav-links .nav-previous a,
+.site-main .comment-navigation .nav-links .nav-next a,
+.site-main .post-navigation .nav-links .nav-previous a,
+.site-main .post-navigation .nav-links .nav-next a {
+  color: #ddd;
+  background-color: #1e1e1e;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 7px 10px;
+  font-size: 0.9rem;
+  font-family: "Roboto-Regular";
+  word-break: break-word;
+}
+.site-main .comment-navigation .nav-links .nav-previous a:hover,
+.site-main .comment-navigation .nav-links .nav-next a:hover,
+.site-main .post-navigation .nav-links .nav-previous a:hover,
+.site-main .post-navigation .nav-links .nav-next a:hover {
+  color: #fff;
+}
+@media screen and (min-width: 992px) {
+  .site-main .comment-navigation .nav-links .nav-previous,
+.site-main .comment-navigation .nav-links .nav-next,
+.site-main .post-navigation .nav-links .nav-previous,
+.site-main .post-navigation .nav-links .nav-next {
+    width: 50%;
+  }
+}
+.site-main .comment-navigation .nav-links .nav-next a::after,
+.site-main .post-navigation .nav-links .nav-next a::after {
+  font-family: "Ionicons";
+  content: "";
+  display: inline-block;
+  margin-left: 20px;
+}
+.site-main .comment-navigation .nav-links .nav-previous a::before,
+.site-main .post-navigation .nav-links .nav-previous a::before {
+  font-family: "Ionicons";
+  content: "";
+  display: inline-block;
+  margin-right: 20px;
+}
+@media screen and (min-width: 992px) {
+  .site-main .comment-navigation .nav-links .nav-previous,
+.site-main .post-navigation .nav-links .nav-previous {
+    float: left;
+  }
+  .site-main .comment-navigation .nav-links .nav-next,
+.site-main .post-navigation .nav-links .nav-next {
+    float: right;
+  }
+}
 /*--------------------------------------------------------------
 ## Mobile Menu
 --------------------------------------------------------------*/
@@ -1549,10 +1625,37 @@ div.site-branding P.site-description {
   margin: 0 0 1.5em;
 }
 
+div.entry-meta {
+  font-size: 0.8rem;
+}
+div.entry-meta span.posted-on a {
+  color: #ccc;
+}
+div.entry-meta span.posted-on a:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  content: "";
+  font-weight: 100;
+  margin-right: 5px;
+}
+div.entry-meta span.byline span.author a {
+  color: #ccc;
+}
+div.entry-meta span.byline span.author a:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  content: "";
+  font-weight: 100;
+  margin-right: 5px;
+}
+
 body.home article.active {
   height: auto;
 }
 
+/**
+* Home & Archive
+*/
 body.home article,
 body.archive article {
   background-color: #4e6276;
@@ -1595,6 +1698,8 @@ body.home article header.entry-header h2.entry-title,
 body.archive article header.entry-header h2.entry-title {
   font-size: 1.1rem;
   color: #fff;
+  -ms-word-wrap: break-word;
+  word-break: break-word;
 }
 body.home article header.entry-header h2.entry-title a,
 body.archive article header.entry-header h2.entry-title a {
@@ -1611,34 +1716,6 @@ body.archive article header.entry-header h2.entry-title a:hover {
 body.archive article header.entry-header h2.entry-title {
     font-size: 1.5rem;
   }
-}
-body.home article div.entry-meta,
-body.archive article div.entry-meta {
-  font-size: 0.8rem;
-}
-body.home article div.entry-meta span.posted-on a,
-body.archive article div.entry-meta span.posted-on a {
-  color: #ccc;
-}
-body.home article div.entry-meta span.posted-on a:before,
-body.archive article div.entry-meta span.posted-on a:before {
-  display: inline-block;
-  font-family: "Ionicons";
-  content: "";
-  font-weight: 100;
-  margin-right: 5px;
-}
-body.home article div.entry-meta span.byline span.author a,
-body.archive article div.entry-meta span.byline span.author a {
-  color: #ccc;
-}
-body.home article div.entry-meta span.byline span.author a:before,
-body.archive article div.entry-meta span.byline span.author a:before {
-  display: inline-block;
-  font-family: "Ionicons";
-  content: "";
-  font-weight: 100;
-  margin-right: 5px;
 }
 body.home article .entry-content,
 body.archive article .entry-content {
@@ -1661,12 +1738,13 @@ body.archive article footer.entry-footer {
   position: absolute;
   width: 90%;
   bottom: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 body.home article footer.entry-footer a.continue-reading,
 body.archive article footer.entry-footer a.continue-reading {
   color: #ddd;
   display: block;
-  /*background-color: #F44336;*/
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
@@ -1675,7 +1753,6 @@ body.archive article footer.entry-footer a.continue-reading {
 }
 body.home article footer.entry-footer a.continue-reading:hover,
 body.archive article footer.entry-footer a.continue-reading:hover {
-  /*background-color: #d53428;*/
   color: #fff;
   text-decoration: none;
 }
@@ -1714,7 +1791,9 @@ body.archive article footer.entry-footer span.open-meta-tags.active:after {
 }
 body.home article footer.entry-footer .meta-infos,
 body.archive article footer.entry-footer .meta-infos {
-  padding-bottom: 10px;
+  padding: 10px;
+  background-color: #1f1f1f;
+  margin-top: 10px;
 }
 body.home article footer.entry-footer .meta-infos span.cat-links,
 body.archive article footer.entry-footer .meta-infos span.cat-links {
@@ -1774,6 +1853,9 @@ body.archive article footer.entry-footer .meta-infos span.tags-links:hover {
   color: #fff;
 }
 
+body.category h1.page-title {
+  color: #FE8703;
+}
 body.category h1.page-title::before {
   font-family: "Ionicons";
   content: "";
@@ -1782,6 +1864,9 @@ body.category h1.page-title::before {
   color: #FE8703;
 }
 
+body.author h1.page-title {
+  color: #FE8703;
+}
 body.author h1.page-title::before {
   font-family: "Ionicons";
   content: "";
@@ -1790,6 +1875,9 @@ body.author h1.page-title::before {
   color: #FE8703;
 }
 
+body.tag h1.page-title {
+  color: #FE8703;
+}
 body.tag h1.page-title::before {
   font-family: "Ionicons";
   content: "";
@@ -1798,12 +1886,147 @@ body.tag h1.page-title::before {
   color: #FE8703;
 }
 
+body.date h1.page-title {
+  color: #FE8703;
+}
 body.date h1.page-title::before {
   font-family: "Ionicons";
   content: "";
   display: inline-block;
   margin: 0 10px 0 0;
   color: #FE8703;
+}
+
+/**
+* Single
+*/
+body.single .site-branding .bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-bottom-right-radius: 80px;
+}
+@media screen and (min-width: 992px) {
+  body.single article header.entry-header {
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    height: min-content;
+  }
+}
+body.single article header.entry-header h1.entry-title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  body.single article header.entry-header h1.entry-title {
+    text-align: left;
+  }
+}
+body.single article footer.entry-footer {
+  font-size: 0.8rem;
+  position: relative;
+  width: 100%;
+  bottom: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+body.single article footer.entry-footer a.continue-reading {
+  color: #ddd;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+}
+body.single article footer.entry-footer a.continue-reading:hover {
+  color: #fff;
+  text-decoration: none;
+}
+body.single article footer.entry-footer a.continue-reading:after {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  display: inline-block;
+  margin-left: 5px;
+}
+body.single article footer.entry-footer span.open-meta-tags {
+  color: #ccc;
+  font-family: "Ionicons";
+  display: inline-block;
+  background-color: #101213;
+  width: 100%;
+  /* margin: 0 auto; */
+  height: 45px;
+  cursor: pointer;
+  line-height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  text-align: center;
+}
+body.single article footer.entry-footer span.open-meta-tags:after {
+  display: block;
+  margin: 0 auto;
+  width: 10px;
+  content: "";
+}
+body.single article footer.entry-footer span.open-meta-tags.active:after {
+  content: "";
+}
+body.single article footer.entry-footer .meta-infos {
+  padding: 10px;
+  background-color: #1f1f1f;
+  margin-top: 10px;
+}
+body.single article footer.entry-footer .meta-infos span.cat-links {
+  display: block;
+  margin-bottom: 5px;
+}
+body.single article footer.entry-footer .meta-infos span.cat-links a {
+  color: #c3c2c2;
+  /* background-color: rgba(0, 0, 0, 0.38); */
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+body.single article footer.entry-footer .meta-infos span.cat-links a:hover {
+  color: #fff;
+}
+body.single article footer.entry-footer .meta-infos span.comments-link {
+  display: block;
+  font-size: 1rem;
+  font-family: sans-serif;
+  height: 40px;
+}
+body.single article footer.entry-footer .meta-infos span.comments-link a {
+  font-family: sans-serif;
+  color: #ddd;
+}
+body.single article footer.entry-footer .meta-infos span.comments-link a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+body.single article footer.entry-footer .meta-infos span.tags-links {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+body.single article footer.entry-footer .meta-infos span.tags-links a {
+  margin-left: 0.4rem;
+  border-radius: 50%;
+  background-color: #232323;
+  padding: 5px 8px;
+  color: #ddd;
+  text-decoration: none;
+  font-family: FontAwesome;
+  display: inline-block;
+  margin: 5px;
+}
+body.single article footer.entry-footer .meta-infos span.tags-links:hover {
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
