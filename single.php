@@ -9,9 +9,16 @@
 
 get_header();
 ?>
-
+<?php
+    if(dro_pizza_sidebar_status( 'sidebar-1' )){
+            $col_count = 'col-12 col-xl-9';
+        }else{
+            $col_count = 'col-lg-12';
+        }
+?>
+<div class="<?php echo $col_count?>">
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main row justify-content-center">
 
 		<?php
 		while ( have_posts() ) :
@@ -31,7 +38,7 @@ get_header();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+</div><!-- .col- -->
 <?php
 get_sidebar();
 get_footer();
