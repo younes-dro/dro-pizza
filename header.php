@@ -70,7 +70,9 @@
                             if( $background_image_header):
                             ?>
                             <div class="site-branding" style="background-image: url(<?php echo esc_url( $background_image_header ) ?>)">
+                                <?php if (is_single() ): ?>
                                 <div class="bg-overlay"></div>
+                                <?php endif; ?>
                             <?php else: ?>
                                 <div class="site-branding">
                             <?php endif ?>

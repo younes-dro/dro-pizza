@@ -229,6 +229,17 @@ $archives: ( "category":"\f26c" , "author":"\f47e","tag":"\f377" , "date":"\f3f4
 * Single
 */
 body.single{
+    .site-branding{
+        .bg-overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 250px;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-bottom-right-radius: 80px;
+        }
+    }
     article{
         header.entry-header{
             text-align: center;
