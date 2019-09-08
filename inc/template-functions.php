@@ -28,6 +28,28 @@ function dro_pizza_body_classes( $classes ) {
 
 add_filter('body_class', 'dro_pizza_body_classes');
 
+if (!function_exists('dro_pizza_article_classes')):
+
+    /**
+     * Add custom classes to the <article>
+     * 
+     * @param array $classes Classes for the article element
+     * @return array 
+     */
+    function dro_pizza_article_classes($classes) {
+        if (is_single()) {
+            $classes[] = 'row';
+        }
+        if(is_front_page() || is_archive() || is_search()){
+            $classes[] = 'post-item';
+        }
+
+        return $classes;
+    }
+
+endif;
+add_filter('post_class', 'dro_pizza_article_classes');
+
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
