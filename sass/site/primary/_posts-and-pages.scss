@@ -46,6 +46,7 @@ div.entry-meta{
 
     }
 }
+
 body.home article.active{
     height: auto;
 }
@@ -110,110 +111,7 @@ body.archive article{
     footer.entry-footer.open{
         position: relative;
     }
-    footer.entry-footer{
-        font-size: .8rem;
-        position: absolute;
-        width: 90%;
-        bottom:5px;
-        a.continue-reading{
-            color: $color__text-continue-reading;
-            display: block;
-            /*background-color: #F44336;*/
-            padding-top: 10px;
-            padding-bottom: 10px;
-            text-align: center;
-            margin-bottom: 10px;
-            font-size:.8rem;
-            &:hover{
-                /*background-color: #d53428;*/
-                color: $color__text-continue-reading-hover;
-                text-decoration: none;
-            }
-            &:after{
-                font-family: "Font Awesome 5 Free";
-                content: "\f35a";
-                display: inline-block;
-                margin-left: 5px;
-            }
-        }        
-        span.open-meta-tags{
-            color: $color__entry-meta-link;
-            font-family: "Ionicons";
-            display: inline-block;
-            background-color: $color__background-open-meta-tags;
-            width: 100%;
-            /* margin: 0 auto; */
-            height: 45px;
-            cursor: pointer;
-            line-height: 45px;
-            width: 45px;
-            border-radius: 50%;
-            text-align: center;
-        }
-        span.open-meta-tags:after{
-            display: block;
-            margin: 0 auto;
-            width: 10px;
-            content: "\f3d0"; 
-        }
-        span.open-meta-tags.active{
-        }
-        span.open-meta-tags.active:after{
-            content: "\f3d8";
-        }
-        .meta-infos{
-            padding-bottom: 10px;
-
-            span.cat-links{
-                display: block;
-                margin-bottom: 5px;
-                a{
-                    color: $color__text-cats-links;
-                    /* background-color: rgba(0, 0, 0, 0.38); */
-                    display: inline-block;
-                    padding: 5px;
-                    margin-bottom: 5px;
-                    text-decoration: underline;
-                    &:hover{
-                        color: $color__text-cats-links-hover;
-                    }
-                }
-            }
-            span.comments-link{
-                display: block;
-                font-size: 1rem;
-                font-family: sans-serif;
-                height: 40px;
-                a{
-                    font-family: sans-serif;
-                    color: $color__text-comments-links;
-                    &:hover{
-                        text-decoration: none;
-                        color: $color__text-comments-links-hover;
-                    }
-                }
-            }
-            span.tags-links{
-                display: block;
-                margin-top: 5px;
-                margin-bottom: 5px;
-                a{
-                    margin-left: 0.4rem;
-                    border-radius: 50%;
-                    background-color: $color__background-tags-links;
-                    padding: 5px 8px;
-                    color: $color__text-tags-links;
-                    text-decoration: none;
-                    font-family: FontAwesome;
-                    display: inline-block;
-                    margin: 5px;
-                }
-                &:hover{
-                    color: $color__background-tags-links-hover;
-                }
-            }
-        }
-    }
+    @include entry-footer('home-archive');
 
 }
 
@@ -242,11 +140,20 @@ body.single{
     }
     article{
         header.entry-header{
-            text-align: center;
+            @media screen and (min-width: 992px){
+                border-right: 1px solid #ccc;
+                border-top: 1px solid #ccc;
+                height: min-content;  
+            }
+
             h1.entry-title{
                 font-size: 1.5rem;
-                margin: 0 0 2rem;
+                text-align: center;
+                @media screen and (min-width: 992px){
+                    text-align:left;
+                }
             }
         }
+        @include entry-footer('single');
     }
 }
