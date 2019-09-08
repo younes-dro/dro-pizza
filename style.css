@@ -538,11 +538,9 @@ svg {
   opacity: 0.8;
 }
 
-.site-main {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.site-content {
+  padding: 70px 0;
 }
-
 footer.site-footer .blog-name-footer {
   background-color: #0e0e0e;
   text-align: center;
@@ -657,8 +655,8 @@ input[type=submit] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
+  background: #0b0b0b;
+  color: #fff;
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
@@ -1276,9 +1274,9 @@ span.left {
 # Widgets
 --------------------------------------------------------------*/
 aside.widget-area {
-  /*background-color: #4e6276;*/
   padding: 5px;
-  /* .widget*/
+  /* .widget */
+  /* .widget_calendar*/
 }
 aside.widget-area .widget {
   margin: 0 0 1.5em;
@@ -1287,55 +1285,75 @@ aside.widget-area .widget {
   padding: 5px 10px;
   /* Make sure select elements fit in widgets. */
 }
+aside.widget-area .widget a {
+  color: #cacaca;
+  display: inline-block;
+  min-height: 45px;
+}
+aside.widget-area .widget a:hover {
+  color: #fff;
+}
 aside.widget-area .widget img {
-  max-width: 40%;
+  /*max-width: 40%;*/
 }
 aside.widget-area .widget .widget-title {
   font-size: 1.5rem;
-  margin: 0 0 10px;
-  /*border-bottom: 2px dotted;*/
-  /*padding: 0 0 0 10px;*/
+  margin: 0 0 2rem;
   font-family: "Roboto-Regular";
   color: #FE8703;
   display: inline-block;
-  /* border-color: #ffffff; */
 }
 aside.widget-area .widget .widget-title a {
   color: #fff;
 }
+aside.widget-area .widget ol {
+  /*border: 1px solid ;*/
+  list-style-type: none;
+  margin: -1em 0 0;
+  padding: 0;
+}
 aside.widget-area .widget ul {
   /*border: 1px solid ;*/
   list-style-type: none;
-  margin: 0 auto;
+  margin: -1em 0 0;
   padding: 0;
 }
-aside.widget-area .widget ul li {
+aside.widget-area .widget li {
   /*border: 1px solid #f0f;*/
   font-family: "Roboto-Regular";
   font-size: 0.9rem;
 }
-aside.widget-area .widget ul li ul {
-  margin: 0 0 0 0.5rem;
-}
-aside.widget-area .widget ul li ul li {
-  /*                        font-size: .7rem;*/
-}
-aside.widget-area .widget ul li a {
-  color: #ddd;
-  display: inline-block;
-  min-height: 45px;
-  padding: 0;
-  margin: 0;
-}
-aside.widget-area .widget ul li a:hover {
-  color: #fff;
+aside.widget-area .widget li ul, aside.widget-area .widget li ol {
+  margin-top: 0;
 }
 aside.widget-area .widget select {
-  max-width: 200px;
+  max-width: 100%;
+}
+aside.widget-area .widget_calendar {
+  min-width: 100%;
 }
 aside.widget-area .widget_calendar a {
-  background-color: #4e6276;
-  color: #fff;
+  color: #4e6276;
+  font-weight: bold;
+  min-height: auto;
+}
+aside.widget-area .widget_pages a, aside.widget-area .widget_nav_menu a {
+  padding: 1em 0;
+  border-bottom: 1px solid #888;
+  display: block;
+}
+aside.widget-area .widget_rss li a::after {
+  content: "";
+  display: block;
+  font-family: "Ionicons";
+  margin: 0 0 0 5px;
+  background: #1e1e1e;
+  color: #ddd;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
 }
 aside.widget-area .widget_archive .widget-title::before {
   font-family: "Ionicons";
@@ -1413,6 +1431,14 @@ aside.widget-area .widget_pages .widget-title::before {
   display: inline-block;
   margin: 0 10px 0 0;
   color: #FE8802;
+}
+aside.widget-area .wp-caption .wp-caption-text {
+  padding: 0.8075em 1em;
+  font-size: 14px;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+  /* background: #e5e5e5; */
+  background: rgba(230, 230, 230, 0.2);
 }
 
 /*--------------------------------------------------------------
