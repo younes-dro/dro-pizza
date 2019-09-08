@@ -175,3 +175,17 @@ nav.pagination{
 
     }
 }
+.site-main .comment-navigation, 
+.site-main .post-navigation{
+    margin: 0 0 1.5em;
+    overflow: hidden;
+    margin: 0 0 1.5em;
+    overflow: hidden;
+    padding-bottom: 10px;
+    width: 100%;
+    @include navigation-posts();
+    
+    @media screen and (min-width:992px){
+        
+    }
+}
