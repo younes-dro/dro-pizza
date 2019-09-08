@@ -22,9 +22,36 @@
     margin: 0 0 1.5em;
 }
 
+div.entry-meta{
+    font-size:.8rem;
+    span.posted-on{
+        a{
+            color: $color__entry-meta-link;
+            &:before{
+                @include entry-meta("\f3f3");
+            }
+
+        }
+    }
+    span.byline{
+        span.author{
+            a{
+                color: $color__entry-meta-link;
+                &:before{
+                    @include entry-meta("\f3a0");
+                }
+            }
+
+        }
+
+    }
+}
 body.home article.active{
     height: auto;
 }
+/**
+* Home & Archive
+*/
 body.home article,
 body.archive article{
     background-color: $color__background-article;
@@ -58,6 +85,8 @@ body.archive article{
         h2.entry-title{
             font-size: 1.1rem;
             color: $color__text-entry-header;
+            -ms-word-wrap: break-word;
+            word-break: break-word;
             a {
                 color:$color__text-entry-header-link;
                 letter-spacing: 0.6px;
@@ -70,30 +99,6 @@ body.archive article{
                 font-size:1.5rem;
             }
         }/* .entry-title */
-    }
-    div.entry-meta{
-        font-size:.8rem;
-        span.posted-on{
-            a{
-                color: $color__entry-meta-link;
-                &:before{
-                    @include entry-meta("\f3f3");
-                }
-
-            }
-        }
-        span.byline{
-            span.author{
-                a{
-                    color: $color__entry-meta-link;
-                    &:before{
-                        @include entry-meta("\f3a0");
-                    }
-                }
-
-            }
-
-        }
     }
     .entry-content{
         font-size: .8rem;
@@ -217,5 +222,20 @@ $archives: ( "category":"\f26c" , "author":"\f47e","tag":"\f377" , "date":"\f3f4
 @each $archive, $glyph in $archives{
     body.#{$archive} {
         @include archive-page-title-icon($glyph);
+    }
+}
+
+/**
+* Single
+*/
+body.single{
+    article{
+        header.entry-header{
+            text-align: center;
+            h1.entry-title{
+                font-size: 1.5rem;
+                margin: 0 0 2rem;
+            }
+        }
     }
 }
