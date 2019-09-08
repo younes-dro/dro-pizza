@@ -62,9 +62,11 @@ svg{
     z-index: 2;
     opacity: .8;
 }
-.site-main{
-    padding-top: 10px;
-    padding-bottom: 10px;    
+
+.site-content{
+    padding: 70px 0;
+    .site-main{    
+    }
 }
 footer.site-footer{
     .blog-name-footer{
