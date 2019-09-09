@@ -70,7 +70,7 @@ if ( !function_exists( 'dro_pizza_image_header' ) ){
         if(is_home() || is_front_page()):
             return get_header_image();
         endif;
-        if( is_single() ):
+        if( is_single() || is_page() ):
             return get_the_post_thumbnail_url();
         endif;
         

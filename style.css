@@ -428,6 +428,10 @@ p {
   line-height: 1.6em;
 }
 
+.entry-content a {
+  text-decoration: underline;
+}
+
 dfn, cite, em, i {
   font-style: italic;
 }
@@ -625,7 +629,7 @@ hr {
 }
 
 ul, ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 0 1.5em 0;
 }
 
 ul {
@@ -1645,6 +1649,25 @@ div.site-branding P.site-description {
   margin: 0 0 1.5em;
 }
 
+.entry-title {
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .entry-title {
+    text-align: left;
+  }
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-right-radius: 80px;
+}
+
 div.entry-meta {
   font-size: 0.8rem;
 }
@@ -1699,15 +1722,6 @@ body.archive article .bg-image {
   height: 100%;
   top: 0;
   left: 0;
-}
-body.home article .bg-overlay,
-body.archive article .bg-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
 }
 body.home article header.entry-header,
 body.archive article header.entry-header {
@@ -1920,15 +1934,6 @@ body.date h1.page-title::before {
 /**
 * Single
 */
-body.single .site-branding .bg-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 250px;
-  background-color: rgba(0, 0, 0, 0.9);
-  border-bottom-right-radius: 80px;
-}
 @media screen and (min-width: 992px) {
   body.single article header.entry-header {
     border-right: 1px solid #ccc;
@@ -2053,8 +2058,7 @@ body.single article footer.entry-footer .meta-infos span.tags-links:hover {
 ## Comments
 --------------------------------------------------------------*/
 .comments-area {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0;
 }
 .comments-area h1, .comments-area h2, .comments-area h3, .comments-area h4, .comments-area h5, .comments-area h6 {
   font-family: "Roboto-Regular";
@@ -2147,6 +2151,18 @@ body.single article footer.entry-footer .meta-infos span.tags-links:hover {
   display: block;
 }
 
+@media screen and (max-width: 768px) {
+  input[type=text], input[type=email],
+input[type=url], input[type=password],
+input[type=search], input[type=number],
+input[type=tel], input[type=range], input[type=date],
+input[type=month], input[type=week], input[type=time],
+input[type=datetime], input[type=datetime-local],
+input[type=color],
+textarea {
+    max-width: 90%;
+  }
+}
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

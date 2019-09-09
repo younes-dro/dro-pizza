@@ -70,7 +70,7 @@
                             if( $background_image_header):
                             ?>
                             <div class="site-branding" style="background-image: url(<?php echo esc_url( $background_image_header ) ?>)">
-                                <?php if (is_single() ): ?>
+                                <?php if (is_single() || is_page() ): ?>
                                 <div class="bg-overlay"></div>
                                 <?php endif; ?>
                             <?php else: ?>
