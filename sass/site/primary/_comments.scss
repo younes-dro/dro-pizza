@@ -1,6 +1,97 @@
-.comment-content a {
-	word-wrap: break-word;
+.comments-area{
+    padding-left: 10px;
+    padding-right: 10px;
+    h1, h2, h3, h4, h5, h6{
+        font-family: "Roboto-Regular";    
+    }
+    h2.comments-title {
+        border-bottom: 1px solid;
+        font-size: 1.6rem;
+
+    }
+    .comment-body{
+        padding-bottom: 2em;
+        margin-bottom: 2em;
+        border-bottom: solid hsl(0, 0%, 80%) 1px;
+    }
+    >  ol {
+        padding: 0;
+        margin: 2em 0;
+        list-style-type: none;
+    }
+    .comment-content {
+        margin-left:0;
+        a{
+            word-wrap: break-word;
+        }
+        @media screen and (min-width: 992px){
+            margin-left: 3rem;
+        }
+    }
+    .reply{
+        font-weight: 600;
+        font-family:  sans-serif;
+        font-size: 14px;
+        font-size: 1.4rem;
+        a{
+            margin-top: 16px;
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 11px;
+            letter-spacing: 1px;
+            background: #222;
+            padding: 10px 15px 10px 15px;
+            border: 1px solid #222;
+        }
+    }
+    .comment-body{
+        .comment-meta{
+            margin-bottom: 1em;
+        }
+    }
+    ol.children{
+        list-style-type: none;
+        margin-left: 0;
+        padding: 0;
+        @media screen and (min-width:992px){
+            margin-left: 50px;
+        }
+    }
+    .comment-author {
+        .avatar {
+            width: 50px;
+            display: block;
+            float: left;
+            margin-right: 20px;
+        }
+        .fn{
+            font-weight: 600;
+            font-family:  sans-serif;
+            font-size: 1rem;
+        }
+    }
+    .comment-metadata {
+        font-size: .8rem;
+    }
+    .comment-respond{
+        .comment-reply-title{
+            margin-bottom: .5em;
+            font-weight: 700;
+        }
+        .comment-form {
+            padding-bottom: 4rem;
+            font-family: sans-serif;
+            font-size: 17px;
+            font-size: 1.1rem;
+            label {
+                display: block;
+            }
+        }
+    }
 }
+
 .bypostauthor {
-	display: block;
+    display: block;
 }

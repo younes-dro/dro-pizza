@@ -414,6 +414,18 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-bottom: 1.5em;
+  word-break: break-word;
+}
+
+@media screen and (min-width: 992px) {
+  .entry-content p {
+    text-align: left;
+  }
+}
+.entry-content p, .entry-content ul, .entry-content ol {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6em;
 }
 
 dfn, cite, em, i {
@@ -421,7 +433,11 @@ dfn, cite, em, i {
 }
 
 blockquote {
-  margin: 0 1.5em;
+  border-top: 1px solid #bbc0c4;
+  border-bottom: 1px solid #bbc0c4;
+  /* font-style: italic; */
+  padding: 1em 1.5em 0;
+  margin-bottom: 1em;
 }
 
 address {
@@ -452,7 +468,7 @@ abbr, acronym {
 }
 
 mark, ins {
-  background: #fff9c0;
+  background: #212529;
   text-decoration: none;
 }
 
@@ -739,13 +755,13 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #ccc;
 }
 a:visited {
   color: #fff;
 }
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: #fff;
 }
 a:focus {
   outline: thin dotted;
@@ -2032,8 +2048,95 @@ body.single article footer.entry-footer .meta-infos span.tags-links:hover {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-.comment-content a {
+.comments-area {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.comments-area h1, .comments-area h2, .comments-area h3, .comments-area h4, .comments-area h5, .comments-area h6 {
+  font-family: "Roboto-Regular";
+}
+.comments-area h2.comments-title {
+  border-bottom: 1px solid;
+  font-size: 1.6rem;
+}
+.comments-area .comment-body {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: solid #cccccc 1px;
+}
+.comments-area > ol {
+  padding: 0;
+  margin: 2em 0;
+  list-style-type: none;
+}
+.comments-area .comment-content {
+  margin-left: 0;
+}
+.comments-area .comment-content a {
   word-wrap: break-word;
+}
+@media screen and (min-width: 992px) {
+  .comments-area .comment-content {
+    margin-left: 3rem;
+  }
+}
+.comments-area .reply {
+  font-weight: 600;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.comments-area .reply a {
+  margin-top: 16px;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 1px;
+  background: #222;
+  padding: 10px 15px 10px 15px;
+  border: 1px solid #222;
+}
+.comments-area .comment-body .comment-meta {
+  margin-bottom: 1em;
+}
+.comments-area ol.children {
+  list-style-type: none;
+  margin-left: 0;
+  padding: 0;
+}
+@media screen and (min-width: 992px) {
+  .comments-area ol.children {
+    margin-left: 50px;
+  }
+}
+.comments-area .comment-author .avatar {
+  width: 50px;
+  display: block;
+  float: left;
+  margin-right: 20px;
+}
+.comments-area .comment-author .fn {
+  font-weight: 600;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+.comments-area .comment-metadata {
+  font-size: 0.8rem;
+}
+.comments-area .comment-respond .comment-reply-title {
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+.comments-area .comment-respond .comment-form {
+  padding-bottom: 4rem;
+  font-family: sans-serif;
+  font-size: 17px;
+  font-size: 1.1rem;
+}
+.comments-area .comment-respond .comment-form label {
+  display: block;
 }
 
 .bypostauthor {
@@ -2111,7 +2214,12 @@ object {
   margin: 0.8075em 0;
 }
 
-.wp-caption-text {
+.wp-caption .wp-caption-text {
+  padding: 0.8075em 1em;
+  font-size: 14px;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+  background: rgba(38, 38, 38, 0.2);
   text-align: center;
 }
 

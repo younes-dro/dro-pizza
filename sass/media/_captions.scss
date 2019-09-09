@@ -11,6 +11,11 @@
 	}
 }
 
-.wp-caption-text {
-	text-align: center;
+.wp-caption .wp-caption-text {
+    padding: 0.8075em 1em;
+    font-size: 14px;
+    font-size: .9rem;
+    font-family: sans-serif;
+    background: rgba(38, 38, 38, 0.2);
+    text-align: center;
 }
