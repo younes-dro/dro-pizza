@@ -1,21 +1,44 @@
 .gallery {
-	margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 .gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
 
-	// Loops to enumerate the classes for gallery columns.
-	@for $i from 2 through 9 {
-		.gallery-columns-#{$i} & {
-			max-width: map-get( $columns, $i );
-		}
-	}
+    // Loops to enumerate the classes for gallery columns.
+    @for $i from 2 through 9 {
+        .gallery-columns-#{$i} & {
+            max-width: map-get( $columns, $i );
+        }
+    }
 }
 
 .gallery-caption {
-	display: block;
+    display: block;
+}
+.toggleCaption {
+    color: $color__entry-meta-link;
+    font-family: "Ionicons";
+    display: inline-block;
+    background-color: $color__background-open-meta-tags;
+    width: 100%;
+    /* margin: 0 auto; */
+    height: 45px;
+    cursor: pointer;
+    line-height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 10px;
+}
+.toggleCaption-plus:before{
+    font-family: "Ionicons";
+    content: "\f3d0";
+}
+.toggleCaption-minus:before{
+    font-family: "Ionicons";
+    content: "\f3d8";
 }
