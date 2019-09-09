@@ -1538,6 +1538,10 @@ aside.widget-area .wp-caption .wp-caption-text {
   /* background: #e5e5e5; */
   background: rgba(230, 230, 230, 0.2);
 }
+aside.widget-area .widget_rss .rss-date, aside.widget-area .widget_rss cite {
+  display: block;
+  font-size: 85%;
+}
 
 /*--------------------------------------------------------------
 # Content
