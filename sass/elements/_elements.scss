@@ -71,6 +71,17 @@ svg{
         padding-top:50px;
     }
 }
+.site-branding{
+    .bg-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        background-color: rgba(0, 0, 0, 0.9);
+        border-bottom-right-radius: 80px;
+    }
+}
 footer.site-footer{
     .blog-name-footer{
         background-color: $color__background-blogname-footer;
