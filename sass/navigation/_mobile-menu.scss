@@ -28,7 +28,7 @@ body.wp_mm_enable{
     }
 }
 .wp_mm_wrapper{
-    height: calc(100vh - 100px);
+    height: calc(100vh - 120px);
     overflow-y: scroll;
     overflow-x: hidden;
     position: fixed;
@@ -127,7 +127,7 @@ span.left{
     position: absolute;
     z-index: 99999;
     right: 0px;
-    top: 0;
+    top: 20px;
     height: 50px;
 }
 #toggle-menu{
