@@ -14,7 +14,8 @@ div.site-branding{
         position: absolute;
         left: 10px;
         font-size: 1em;
-        bottom: 0px; 
+        bottom: 0px;
+        max-width: 60%; 
         a{
             background: linear-gradient(to right, $color__background-site-title-start 3%, $color__background-site-title-end 120%);
             /*color: #fff;*/
@@ -29,6 +30,7 @@ div.site-branding{
                 color: #f1f1f1;
             }
         }
+        
     }
     div.site-description-container{
         position: absolute;
