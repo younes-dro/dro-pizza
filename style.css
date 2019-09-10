@@ -567,6 +567,16 @@ svg {
   }
 }
 
+.site-branding .bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-bottom-right-radius: 80px;
+}
+
 footer.site-footer .blog-name-footer {
   background-color: #0e0e0e;
   text-align: center;
@@ -1096,7 +1106,7 @@ body.wp_mm_enable {
 }
 
 .wp_mm_wrapper {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 120px);
   overflow-y: scroll;
   overflow-x: hidden;
   position: fixed;
@@ -1193,7 +1203,7 @@ span.left {
   position: absolute;
   z-index: 99999;
   right: 0px;
-  top: 0;
+  top: 20px;
   height: 50px;
 }
 
@@ -1570,6 +1580,7 @@ div.site-branding h1.site-title {
   left: 10px;
   font-size: 1em;
   bottom: 0px;
+  max-width: 60%;
 }
 div.site-branding h1.site-title a {
   background: linear-gradient(to right, #f00 3%, #630000 120%);
@@ -1658,16 +1669,6 @@ div.site-branding P.site-description {
   }
 }
 
-.bg-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 250px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-bottom-right-radius: 80px;
-}
-
 div.entry-meta {
   font-size: 0.8rem;
 }
@@ -1722,6 +1723,15 @@ body.archive article .bg-image {
   height: 100%;
   top: 0;
   left: 0;
+}
+body.home article .bg-overlay,
+body.archive article .bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 body.home article header.entry-header,
 body.archive article header.entry-header {
@@ -2283,6 +2293,32 @@ object {
 
 .gallery-caption {
   display: block;
+}
+
+.toggleCaption {
+  color: #ccc;
+  font-family: "Ionicons";
+  display: inline-block;
+  background-color: #101213;
+  width: 100%;
+  /* margin: 0 auto; */
+  height: 45px;
+  cursor: pointer;
+  line-height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.toggleCaption-plus:before {
+  font-family: "Ionicons";
+  content: "";
+}
+
+.toggleCaption-minus:before {
+  font-family: "Ionicons";
+  content: "";
 }
 
 /*# sourceMappingURL=style.css.map */
