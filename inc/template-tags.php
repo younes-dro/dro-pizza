@@ -26,7 +26,7 @@ if ( ! function_exists( 'dro_pizza_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( '%s', 'post date', 'dro-pizza' ),
+			esc_html_x( 'On %s', 'post date', 'dro-pizza' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -42,7 +42,7 @@ if ( ! function_exists( 'dro_pizza_posted_by' ) ) :
 	function dro_pizza_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( '%s', 'post author', 'dro-pizza' ),
+			esc_html_x( 'by %s', 'post author', 'dro-pizza' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -65,11 +65,11 @@ if ( ! function_exists( 'dro_pizza_entry_footer' ) ) :
 				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'dro-pizza' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
-			/* translators: used between list items, there is a space after the comma */
+			
 			$tags_list = get_the_tag_list( );
 			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( '%1$s', 'dro-pizza' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				
+				printf( '<span class="tags-links">%1$s</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
