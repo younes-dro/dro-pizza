@@ -1,19 +1,16 @@
 === Dro Pizza ===
-
-Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-Requires at least: 4.5
-Tested up to: 4.8
+Contributors: vanbom
+Requires at least: 5.2.3
+Tested up to: 5.2.3
+Requires PHP: 7.3.8
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
-License URI: LICENSE
-
-A starter theme called Dro Pizza.
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Tags:  custom-logo, custom-menu, featured-images, one-column, full-width-template, theme-options
 
 == Description ==
 
-Description
+create simple online pizzeria shop.
 
 == Installation ==
 
@@ -21,16 +18,61 @@ Description
 2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
+== Copyright ==
+
+Dro Pizza  WordPress Theme, Copyright 2019 Younes DRO
+It is distributed under the terms of the GNU GPL
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
+
+dro-pizza bundles the following third-party resources:
+
+Bootstrap, Copyright 2011-2018 Twitter
+License: MIT
+Source: https://getbootstrap.com/
+
+Font Awesome icons, Copyright Dave Gandy
+Icons License: CC BY 4.0 
+Fonts License: SIL OFL 1.1 
+Source: http://fontawesome.io/
+
+Ionicons v2.0.0,  Created by Ben Sperry for the Ionic Framework
+License : MIT
+Source  :  http://ionicons.com/
+
+Courgette Font, Copyright (c) 2012 by Sorkin Type Co (www.sorkintype.com), with Reserved Font Name "Courgette".
+License : SIL Open Font License, Version 1.1
+Source : www.sorkintype.com
+
+Montserrat Font, Copyright 2011 The Montserrat Project Authors
+License : the SIL Open Font License, Version 1.1
+Source : https://github.com/JulietaUla/Montserrat
+
+Roboto Font, Copyright Christian Robertson
+License :  Apache License, Version 2.0
+Source :  https://github.com/google/roboto/
+
+All the images used in screenshot  from : https://pxhere.com/ ,  CC0 Domaine public
+https://pxhere.com/fr/photo/1278807
+https://pxhere.com/fr/photo/1104270
+https://pxhere.com/fr/photo/954587
+https://pxhere.com/fr/photo/121603
+
+
+jQuery Superfish Menu Plugin - v1.7.9, Copyright (c) 2016 Joel Birch
+License : MIT
+Source  : https://superfish.joelbirch.co/
+
 == Frequently Asked Questions ==
 
 = Does this theme support any plugins? =
 
 Dro Pizza includes support for Infinite Scroll in Jetpack.
-
-== Changelog ==
-
-= 1.0 - May 12 2015 =
-* Initial release
 
 == Credits ==
 
