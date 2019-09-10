@@ -10,7 +10,7 @@ Tags:  custom-logo, custom-menu, featured-images, one-column, full-width-templat
 
 == Description ==
 
-create simple online pizzeria shop.
+create a simple online pizzeria shop.
 
 == Installation ==
 
