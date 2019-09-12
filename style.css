@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /*!
 Theme Name: Dro Pizza
-Theme URI: https://github.com/younes-dro/dro-pizza
+Theme URI: http://underscores.me/
 Author: Younes DRO
 Author URI: https://dro.123.fr/
-Description: create a simple online pizzeria shop.
+Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -41,6 +41,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Print
 --------------------------------------------------------------*/
 @font-face {
   font-family: "Roboto-Regular";
@@ -2319,6 +2320,129 @@ object {
 .toggleCaption-minus:before {
   font-family: "Ionicons";
   content: "";
+}
+
+/*--------------------------------------------------------------
+# Print
+--------------------------------------------------------------*/
+@media print {
+  body {
+    background: white;
+    font-size: 10pt;
+    margin: 0;
+    color: #000;
+  }
+
+  div {
+    display: table;
+    /*page-break-inside: avoid;*/
+  }
+
+  .site-header {
+    background-color: #eee;
+    height: 75px;
+  }
+  .site-header #site-navigation {
+    display: none;
+  }
+  .site-header #toggle-menu {
+    display: none;
+  }
+  .site-header .site-branding .site-title a {
+    color: #000;
+  }
+  .site-header .site-branding .site-description-container p.site-description {
+    color: #000;
+    font-size: 12pt;
+  }
+
+  #content {
+    margin-left: 0;
+    float: none;
+    width: auto;
+  }
+  #content a, #content span {
+    font-weight: bold;
+    color: #000;
+  }
+  #content a.continue-reading {
+    display: none;
+  }
+  #content .entry-title {
+    text-align: left;
+  }
+  #content .entry-footer span.open-meta-tags {
+    display: none;
+  }
+  #content nav.post-navigation,
+#content nav.pagination {
+    display: none;
+  }
+
+  footer.site-footer {
+    display: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  h3 {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  blockquote, table, pre {
+    page-break-inside: avoid;
+  }
+
+  ul, ol, dl {
+    page-break-before: avoid;
+  }
+
+  figure.alignnone img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    page-break-inside: avoid;
+  }
+
+  figure.alignright img {
+    padding: 4px;
+    margin: 0 0 2px 7px;
+    display: inline;
+    page-break-inside: avoid;
+  }
+
+  figure.alignright img {
+    padding: 4px;
+    margin: 0 7px 2px 0;
+    display: inline;
+    page-break-inside: avoid;
+  }
+
+  img {
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+
+  aside {
+    display: none;
+  }
+
+  .comment-respond {
+    display: none;
+  }
+
+  div.reply {
+    display: none;
+  }
+
+  span.comments-link {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

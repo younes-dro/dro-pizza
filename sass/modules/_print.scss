@@ -1,0 +1,95 @@
+@media print {
+    body {
+        background:white;
+        font-size:10pt;
+        margin:0; 
+        color: #000;
+    }
+    div{
+        display: table;
+        /*page-break-inside: avoid;*/
+    }
+
+    .site-header{ 
+        background-color: #eee;
+        height:75px;
+        #site-navigation{
+            display: none;
+        }
+        #toggle-menu{
+            display: none;
+        }
+        .site-branding{
+            .site-title{
+                a{
+                    color: #000;
+                }
+            }
+            .site-description-container{
+                p.site-description{
+                    color: #000;
+                    font-size: 12pt;
+                }
+            }
+        }
+    }
+    #content{
+        margin-left:0;
+        float:none;
+        width:auto;
+        a , span{
+            font-weight:bold;
+            color:#000;
+        }
+        a.continue-reading{
+            display: none;
+        }
+        .entry-title{
+            text-align: left;
+        }
+
+        .entry-footer{
+            span.open-meta-tags{
+                display: none;
+            }
+        }
+        nav.post-navigation,
+        nav.pagination{
+            display: none;
+        }
+    }
+    footer.site-footer{
+        display: none;
+    }
+
+
+    h1, h2, h3, h4, h5, h6 { page-break-after:avoid;
+                             page-break-inside:avoid; }
+
+    h3 { margin-left:10px;
+         margin-bottom:0px;
+         padding-bottom:0px; }
+    blockquote, table, pre { page-break-inside:avoid; }
+
+    ul, ol, dl  { page-break-before:avoid; }
+
+    figure.alignnone img { display: block;
+                           margin-left: auto;
+                           margin-right: auto;
+                           page-break-inside:avoid}
+    figure.alignright img { padding: 4px;
+                            margin: 0 0 2px 7px;
+                            display: inline;page-break-inside:avoid }
+    figure.alignright img { padding: 4px;
+                            margin: 0 7px 2px 0;
+                            display: inline;page-break-inside:avoid }
+
+    img { page-break-inside:avoid;
+          page-break-after:avoid; }
+    aside{display: none}
+
+    .comment-respond{display: none}
+    div.reply{display: none}
+    span.comments-link{display: none}
+
+}
