@@ -1805,8 +1805,10 @@ body.home article footer.entry-footer a.continue-reading:after,
 body.archive article footer.entry-footer a.continue-reading:after {
   font-family: "Font Awesome 5 Free";
   content: "";
-  display: inline-block;
-  margin-left: 5px;
+  width: 45px;
+  height: 45px;
+  font-size: 1rem;
+  line-height: 45px;
 }
 body.home article footer.entry-footer span.open-meta-tags,
 body.archive article footer.entry-footer span.open-meta-tags {
@@ -1985,8 +1987,10 @@ body.single article footer.entry-footer a.continue-reading:hover {
 body.single article footer.entry-footer a.continue-reading:after {
   font-family: "Font Awesome 5 Free";
   content: "";
-  display: inline-block;
-  margin-left: 5px;
+  width: 45px;
+  height: 45px;
+  font-size: 1rem;
+  line-height: 45px;
 }
 body.single article footer.entry-footer span.open-meta-tags {
   color: #ccc;

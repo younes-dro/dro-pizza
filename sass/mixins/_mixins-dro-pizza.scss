@@ -90,8 +90,10 @@
             &:after{
                 font-family: "Font Awesome 5 Free";
                 content: "\f35a";
-                display: inline-block;
-                margin-left: 5px;
+                width: 45px;
+                height: 45px;
+                font-size: 1rem;
+                line-height: 45px;
             }
         }        
         span.open-meta-tags{

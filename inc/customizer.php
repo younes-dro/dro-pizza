@@ -77,6 +77,19 @@ function dro_pizza_customize_register($wp_customize) {
         'priority' => 160,
         'cabability' => 'edit_theme_options'
     ));
+    // Text Continue reading
+    $wp_customize->add_setting('dro_pizza_continue_reading_status', array(
+        'default' => $defaults['dro_pizza_continue_reading_status'],
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'dro_pizza_sanitize_checkbox',
+            )
+    );
+    $wp_customize->add_control('dro_pizza_continue_reading_status', array(
+        'label' => esc_html__('Display Continue reading', 'dro-pizza'),
+        'section' => 'dro_pizza_meta_settings',
+        'type' => 'checkbox',
+        'priority' => 100        
+    ));
     // Posted On , Author
     $wp_customize->add_setting('dro_pizza_postedon_status', array(
         'default' => $defaults['dro_pizza_postedon_status'],
@@ -216,6 +229,7 @@ if (!function_exists('dro_pizza_default_meta_options')):
     function dro_pizza_default_meta_options() {
 
         $defaults = array();
+        $defaults['dro_pizza_continue_reading_status'] = false;
         $defaults['dro_pizza_postedon_status'] = false;
         $defaults['dro_pizza_tags_status'] = false;
         $defaults['dro_pizza_footer_logo'] = false;

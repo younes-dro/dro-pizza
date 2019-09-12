@@ -46,7 +46,13 @@
         <footer class="entry-footer">
             <a href="<?php esc_url(the_permalink())?>" 
                title="<?php esc_attr(the_title())?>" 
-               class="continue-reading"><?php esc_html_e('Continue Reading', 'dro-pizza')?>
+               class="continue-reading">
+                   <?php 
+                   $dro_pizza_continue_reading_status = dro_pizza_get_option('dro_pizza_continue_reading_status');
+                   if($dro_pizza_continue_reading_status):
+                    esc_html_e('Continue Reading', 'dro-pizza');
+                endif;
+                    ?>
             </a>
             <?php if ( dro_pizza_get_option('dro_pizza_tags_status') ) :?>
             <span class="open-meta-tags"></span>
