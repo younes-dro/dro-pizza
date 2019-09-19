@@ -10,7 +10,7 @@ Tags:  custom-logo, custom-menu, featured-images, one-column, full-width-templat
 
 == Description ==
 
-create a simple online pizzeria shop.
+DRO Pizza allows you to convert a simple blog to a pizzeria shop. The theme gives you the hand to customize the Posts to become a simple product. In the home page posts are displayed as responsive columns, the featured image of the post is displayed as a backgound giving a modern design.
 
 == Installation ==
 
