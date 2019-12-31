@@ -1822,7 +1822,7 @@ body.archive article footer.entry-footer {
   width: 90%;
   bottom: 5px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
 body.home article footer.entry-footer a.continue-reading,
 body.archive article footer.entry-footer a.continue-reading {
@@ -2013,7 +2013,7 @@ body.single article footer.entry-footer {
   width: 100%;
   bottom: 5px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
 body.single article footer.entry-footer a.continue-reading {
   color: #ddd;
