@@ -109,18 +109,25 @@
             width: 45px;
             border-radius: 50%;
             text-align: center;
+            &:hover{
+                background-color: #19191a;
+                color: #9b9a9a;
+            }
+            &:after{
+                display: block;
+                margin: 0 auto;
+                width: 10px;
+                content: "\f3d0"; 
+            }
+            &.active{
+                &:after{
+                    content: "\f3d8";
+                }
+            }
         }
-        span.open-meta-tags:after{
-            display: block;
-            margin: 0 auto;
-            width: 10px;
-            content: "\f3d0"; 
-        }
-        span.open-meta-tags.active{
-        }
-        span.open-meta-tags.active:after{
-            content: "\f3d8";
-        }
+
+
+
         .meta-infos{
             padding: 10px;
             background-color: #1f1f1f;

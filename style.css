@@ -1859,6 +1859,11 @@ body.archive article footer.entry-footer span.open-meta-tags {
   border-radius: 50%;
   text-align: center;
 }
+body.home article footer.entry-footer span.open-meta-tags:hover,
+body.archive article footer.entry-footer span.open-meta-tags:hover {
+  background-color: #19191a;
+  color: #9b9a9a;
+}
 body.home article footer.entry-footer span.open-meta-tags:after,
 body.archive article footer.entry-footer span.open-meta-tags:after {
   display: block;
@@ -2039,6 +2044,10 @@ body.single article footer.entry-footer span.open-meta-tags {
   width: 45px;
   border-radius: 50%;
   text-align: center;
+}
+body.single article footer.entry-footer span.open-meta-tags:hover {
+  background-color: #19191a;
+  color: #9b9a9a;
 }
 body.single article footer.entry-footer span.open-meta-tags:after {
   display: block;
