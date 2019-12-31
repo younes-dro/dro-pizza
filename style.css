@@ -57,6 +57,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   font-family: "Montserrat-Regular";
   src: url("assets/fonts/Montserrat-Regular.ttf");
 }
+/* Max width */
+/* Blck gallery column width */
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -2372,6 +2374,93 @@ object {
 .toggleCaption-minus:before {
   font-family: "Ionicons";
   content: "";
+}
+
+/* Gallery block */
+article.category-block ul.wp-block-gallery {
+  list-style-type: none;
+  /*background-color: #181818;*/
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  border: 1px solid #eee;
+}
+article.category-block ul.wp-block-gallery li.blocks-gallery-item > figure {
+  /*border: 1px solid #ccc;*/
+}
+article.category-block ul.wp-block-gallery li.blocks-gallery-item > figure img {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+article.category-block ul.wp-block-gallery figcaption {
+  display: none;
+}
+
+.columns-2 li.blocks-gallery-item {
+  max-width: 50%;
+  /*background-color: brown;*/
+  margin-bottom: 20px;
+  flex: 0 0 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-self: flex-end;
+}
+.columns-3 li.blocks-gallery-item {
+  max-width: 33.33%;
+  /*background-color: brown;*/
+  margin-bottom: 20px;
+  flex: 0 0 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-self: flex-end;
+}
+.columns-4 li.blocks-gallery-item {
+  max-width: 25%;
+  /*background-color: brown;*/
+  margin-bottom: 20px;
+  flex: 0 0 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-self: flex-end;
+}
+.columns-5 li.blocks-gallery-item {
+  max-width: 20%;
+  /*background-color: brown;*/
+  margin-bottom: 20px;
+  flex: 0 0 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-self: flex-end;
+}
+.columns-6 li.blocks-gallery-item {
+  max-width: 16.66%;
+  /*background-color: brown;*/
+  margin-bottom: 20px;
+  flex: 0 0 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-self: flex-end;
+}
+.columns-7 li.blocks-gallery-item {
+  max-width: 14.28%;
+  /*background-color: brown;*/
+  margin-bottom: 20px;
+  flex: 0 0 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-self: flex-end;
+}
+.columns-8 li.blocks-gallery-item {
+  max-width: 12.5%;
+  /*background-color: brown;*/
+  margin-bottom: 20px;
+  flex: 0 0 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-self: flex-end;
 }
 
 /*--------------------------------------------------------------

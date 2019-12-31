@@ -42,3 +42,46 @@
     font-family: "Ionicons";
     content: "\f3d8";
 }
+
+/* Gallery block */
+article.category-block{
+    ul.wp-block-gallery{
+        list-style-type: none;
+        /*background-color: #181818;*/
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+        
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+        border: 1px solid #eee;
+        li.blocks-gallery-item{
+            > figure{
+                /*border: 1px solid #ccc;*/
+                img{
+                    box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+                }
+            }
+        }
+        figcaption{
+            display: none;
+        }
+    }
+}
+li.blocks-gallery-item{
+    
+    @for $i from 2 through 8{
+        .columns-#{$i} &{
+            max-width: map-get($columns, $i);
+            /*background-color: brown;*/
+            margin-bottom: 20px;
+            flex: 0 0 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            align-self: flex-end;
+
+        }
+    }
+}
