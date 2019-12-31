@@ -149,3 +149,23 @@ function dro_pizza_custom_archive_title( $title ) {
 }
 add_filter( 'get_the_archive_title', 'dro_pizza_custom_archive_title' );
 
+/**
+ * Limit  title length homepage
+ * 
+ * @param string $title
+ * @return string
+ */
+function max_title_length( $title ) {
+    if(is_home() || is_tag() || is_archive()){
+        $max = 40;
+        if( strlen( $title ) > $max ) {
+            return substr( $title, 0, $max ). " &hellip;";
+        } else {
+            return $title;
+        }
+    }
+    
+    return $title;
+}
+add_filter( 'the_title', 'max_title_length');
+
