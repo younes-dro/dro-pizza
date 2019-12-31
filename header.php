@@ -22,23 +22,23 @@
     <body <?php body_class(); ?>>
         <div id="page" class="site">
             <div class="container-fluid">
-                <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'dro-pizza'); ?></a>
+                <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dro-pizza' ); ?></a>
                 <?php
-                $adress_infos = get_theme_mod('dro_pizza_adress_infos');
-                $phone_infos = get_theme_mod('dro_pizza_phone_infos');
-                if (!empty(trim($adress_infos)) || !empty(trim($phone_infos))):
+                $adress_infos = trim( get_theme_mod( 'dro_pizza_adress_infos' ) );
+                $phone_infos = trim( get_theme_mod ( 'dro_pizza_phone_infos' ) );
+                if ( !empty( $adress_infos ) || !empty( $phone_infos ) ):
                     ?>
                     <div class = "row justify-content-center top-header">
                         <div class = "p2">
-                            <?php if (!empty(trim($adress_infos))): ?>
+                            <?php if ( !empty( $adress_infos ) ): ?>
                                 <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                                <span><?php echo esc_html($adress_infos); ?></span>
+                                <span><?php echo esc_html( $adress_infos ); ?></span>
                             <?php endif; ?>
                         </div>
                         <div class="p2">
-                            <?php if (!empty(trim($phone_infos))): ?>
+                            <?php if ( !empty( $phone_infos ) ): ?>
                                 <i class="fas fa-shipping-fast" aria-hidden="true"></i>
-                                <a href="" class="phone"><?php echo esc_html($phone_infos); ?></a>
+                                <a href="" class="phone"><?php echo esc_html( $phone_infos ); ?></a>
                             <?php endif; ?>
                         </div>                    
                     </div>    
@@ -56,7 +56,7 @@
                             </svg>
 
                             <nav id="site-navigation" class="main-navigation">
-                                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'dro-pizza'); ?></button>
+                                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'dro-pizza' ); ?></button>
                                 <?php
                                 wp_nav_menu(array(
                                     'theme_location' => 'menu-1',
@@ -67,10 +67,10 @@
 
                             <?php 
                             $background_image_header = dro_pizza_image_header();
-                            if( $background_image_header):
+                            if( $background_image_header ):
                             ?>
                             <div class="site-branding" style="background-image: url(<?php echo esc_url( $background_image_header ) ?>)">
-                                <?php if (is_single() || is_page() ): ?>
+                                <?php if ( is_single() || is_page() ): ?>
                                 <div class="bg-overlay"></div>
                                 <?php endif; ?>
                             <?php else: ?>
@@ -78,13 +78,13 @@
                             <?php endif ?>
                                 <?php
                                 the_custom_logo();
-                                if (get_bloginfo('name') || is_customize_preview()) :
+                                if ( get_bloginfo( 'name' ) || is_customize_preview() ) :
                                     ?>
-                                    <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+                                    <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                                     <?php
                                 endif;
-                                $dro_pizza_description = get_bloginfo('description', 'display');
-                                if ($dro_pizza_description || is_customize_preview()) :
+                                $dro_pizza_description = get_bloginfo( 'description', 'display' );
+                                if ( $dro_pizza_description || is_customize_preview() ) :
                                     ?>
                                     <div class="site-description-container">
                                         <p class="site-description"><?php echo $dro_pizza_description; /* WPCS: xss ok. */ ?></p>
