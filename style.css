@@ -1682,6 +1682,10 @@ div.site-branding P.site-description {
   text-align: center;
   margin-top: 5px;
 }
+.page-links a:hover {
+  background-color: #19191a;
+  color: #9b9a9a;
+}
 @media screen and (min-width: 768px) {
   .page-links a {
     display: inline-block;

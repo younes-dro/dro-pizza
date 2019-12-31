@@ -29,7 +29,7 @@
     span{
         display: block;
         @media screen and (min-width: 768px){
-        display: inline-block;
+            display: inline-block;
         }
     }
     a{
@@ -39,6 +39,10 @@
         padding: 5px 10px;
         text-align: center;
         margin-top: 5px;
+        &:hover{
+            background-color: #19191a;
+            color: #9b9a9a;
+        }
         @media screen and (min-width: 768px){
             display: inline-block;
             margin-top: 0;
