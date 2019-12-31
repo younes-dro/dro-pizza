@@ -1,4 +1,5 @@
-=== Dro Pizza ===
+
+# Dro Pizza
 Contributors: vanbom
 Requires at least: 5.2.3
 Tested up to: 5.2.3
@@ -8,17 +9,17 @@ License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags:  custom-logo, custom-menu, featured-images, one-column, full-width-template, theme-options
 
-== Description ==
+## Description 
 
-create simple online pizzeria shop.
+DRO Pizza lets you present your pizzas in a simple and modern way. It offers a set of options where you can customize your Pizza Store : simple and fast.
 
-== Installation ==
+## Installation
 
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
-== Copyright ==
+## Copyright 
 
 Dro Pizza  WordPress Theme, Copyright 2019 Younes DRO
 It is distributed under the terms of the GNU GPL
@@ -68,13 +69,13 @@ jQuery Superfish Menu Plugin - v1.7.9, Copyright (c) 2016 Joel Birch
 License : MIT
 Source  : https://superfish.joelbirch.co/
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions
 
-= Does this theme support any plugins? =
+## Does this theme support any plugins?
 
 Dro Pizza includes support for Infinite Scroll in Jetpack.
 
-== Credits ==
+## Credits 
 
 * Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
