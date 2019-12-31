@@ -5,7 +5,7 @@ Theme URI: https://github.com/younes-dro/dro-pizza
 Author: Younes DRO
 Author URI: https://dro.123.fr/
 Description: DRO Pizza lets you present your pizzas in a simple and modern way. It offers a set of options where you can customize your Pizza Store : simple and fast.
-Version: 1.2.1
+Version: 1.2.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: dro-pizza
@@ -1658,7 +1658,41 @@ div.site-branding P.site-description {
 
 .page-links {
   clear: both;
-  margin: 0 0 1.5em;
+  margin: 0 auto;
+  background-color: #101213;
+  display: block;
+  padding: 10px 20px;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 50%;
+}
+.page-links span {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .page-links span {
+    display: inline-block;
+  }
+}
+.page-links a {
+  color: #ddd;
+  background-color: #1e1e1e;
+  display: block;
+  padding: 5px 10px;
+  text-align: center;
+  margin-top: 5px;
+}
+@media screen and (min-width: 768px) {
+  .page-links a {
+    display: inline-block;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-links {
+    display: inline-block;
+    width: auto;
+  }
 }
 
 .entry-title {
