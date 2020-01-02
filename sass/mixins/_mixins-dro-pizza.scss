@@ -246,3 +246,20 @@
     }
 
 }
+
+// buttons style
+@mixin button-style($type){
+
+    @if $type == 'squared' {
+        &.is-style-squared{
+            border-radius: 0px;
+        }
+    }
+    @if $type == 'outline'{
+        &.is-style-outline{
+            border: 2px solid #101213;
+            border-radius: 10px;
+            background-color: transparent;
+        }
+    }
+}

@@ -2383,7 +2383,7 @@ span.toggleCaption i.toggleCaption-minus::before {
 /* Gallery block */
 article.category-block ul.wp-block-gallery {
   list-style-type: none;
-  /*background-color: #181818;*/
+  background-color: #1e0000;
   padding: 0;
   margin: 0 auto;
   text-align: center;
@@ -2391,11 +2391,9 @@ article.category-block ul.wp-block-gallery {
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
-  border: 1px solid #eee;
 }
 article.category-block ul.wp-block-gallery li.blocks-gallery-item > figure {
   position: relative;
-  border: 1px solid #ccc;
 }
 article.category-block ul.wp-block-gallery li.blocks-gallery-item > figure img {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -2481,11 +2479,11 @@ article.category-block ul.wp-block-gallery figcaption {
 /*--------------------------------------------------------------
 ## Video
 --------------------------------------------------------------*/
-figure.wp-block-video {
+figure.wp-block-video, div.wp-block-cover {
   max-width: 100%;
   height: auto;
 }
-figure.wp-block-video video {
+figure.wp-block-video video, div.wp-block-cover video {
   max-width: 100%;
   height: auto;
 }
@@ -2496,6 +2494,27 @@ figure.wp-block-audio {
 }
 figure.wp-block-audio audio {
   max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Buttons
+--------------------------------------------------------------*/
+.wp-block-button {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #ddd;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: #101213;
+  border-radius: 14px;
+}
+.wp-block-button.is-style-squared {
+  border-radius: 0px;
+}
+.wp-block-button.is-style-outline {
+  border: 2px solid #101213;
+  border-radius: 10px;
+  background-color: transparent;
 }
 
 /*--------------------------------------------------------------
