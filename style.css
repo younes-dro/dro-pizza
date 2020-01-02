@@ -5,7 +5,7 @@ Theme URI: https://github.com/younes-dro/dro-pizza
 Author: Younes DRO
 Author URI: https://dro.123.fr/
 Description: DRO Pizza lets you present your pizzas in a simple and modern way. It offers a set of options where you can customize your Pizza Store : simple and fast.
-Version: 1.2.3
+Version: 1.2.4
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: dro-pizza
@@ -676,11 +676,31 @@ img {
 figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area. */
+  max-width: 100%;
+}
+
+figure.wp-caption .wp-caption-text {
+  padding: 0.8075em 1em;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  background: #e5e5e5;
+  background: #e6e6e6;
+  color: #000;
+  text-align: center;
+  margin: 0.8075em 0;
+}
+figure.wp-caption .wp-caption-text a {
+  color: #000;
+  font-weight: bold;
 }
 
 table {
   margin: 0 0 1.5em;
   width: 100%;
+}
+
+table.wp-block-table {
+  color: #000;
 }
 
 /*--------------------------------------------------------------
@@ -2285,31 +2305,22 @@ object {
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
-.wp-caption {
-  margin-bottom: 1.5em;
-  max-width: 100%;
-}
-.wp-caption img[class*=wp-image-] {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.wp-caption .wp-caption-text {
-  margin: 0.8075em 0;
-}
-
-.wp-caption .wp-caption-text {
-  padding: 0.8075em 1em;
-  font-size: 14px;
-  font-size: 0.9rem;
-  font-family: sans-serif;
-  background: rgba(38, 38, 38, 0.2);
-  text-align: center;
-}
-
+/*@import "captions";*/
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
+ul.wp-block-gallery.alignleft.columns-2 {
+  display: flex !important;
+}
+
+div.wp-block-cover.has-background-dim {
+  height: auto !important;
+}
+
+figure.wp-block-audio audio {
+  min-width: 100%;
+}
+
 .gallery {
   margin-bottom: 1.5em;
 }
@@ -2380,143 +2391,14 @@ span.toggleCaption i.toggleCaption-minus::before {
   content: "";
 }
 
-/* Gallery block */
-article.category-block ul.wp-block-gallery {
-  list-style-type: none;
-  background-color: #1e0000;
-  padding: 0;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
-}
-article.category-block ul.wp-block-gallery li.blocks-gallery-item > figure {
-  position: relative;
-}
-article.category-block ul.wp-block-gallery li.blocks-gallery-item > figure img {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-article.category-block ul.wp-block-gallery figcaption {
-  background-color: #101213b0;
-  color: #ddd;
-  display: block;
-  padding: 2px;
-  position: absolute;
-  bottom: 0;
-  line-height: 1rem;
-  font-size: 0.6rem;
-  overflow: auto;
-  max-height: 100%;
-  width: 100%;
-}
-
-.columns-2 li.blocks-gallery-item {
-  max-width: 50%;
-  /*background-color: brown;*/
-  margin-bottom: 20px;
-  flex: 0 0 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  align-self: flex-end;
-}
-.columns-3 li.blocks-gallery-item {
-  max-width: 33.33%;
-  /*background-color: brown;*/
-  margin-bottom: 20px;
-  flex: 0 0 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  align-self: flex-end;
-}
-.columns-4 li.blocks-gallery-item {
-  max-width: 25%;
-  /*background-color: brown;*/
-  margin-bottom: 20px;
-  flex: 0 0 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  align-self: flex-end;
-}
-.columns-5 li.blocks-gallery-item {
-  max-width: 20%;
-  /*background-color: brown;*/
-  margin-bottom: 20px;
-  flex: 0 0 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  align-self: flex-end;
-}
-.columns-6 li.blocks-gallery-item {
-  max-width: 16.66%;
-  /*background-color: brown;*/
-  margin-bottom: 20px;
-  flex: 0 0 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  align-self: flex-end;
-}
-.columns-7 li.blocks-gallery-item {
-  max-width: 14.28%;
-  /*background-color: brown;*/
-  margin-bottom: 20px;
-  flex: 0 0 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  align-self: flex-end;
-}
-.columns-8 li.blocks-gallery-item {
-  max-width: 12.5%;
-  /*background-color: brown;*/
-  margin-bottom: 20px;
-  flex: 0 0 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  align-self: flex-end;
-}
-
 /*--------------------------------------------------------------
 ## Video
 --------------------------------------------------------------*/
-figure.wp-block-video, div.wp-block-cover {
-  max-width: 100%;
-  height: auto;
-}
-figure.wp-block-video video, div.wp-block-cover video {
-  max-width: 100%;
-  height: auto;
-}
-
-figure.wp-block-audio {
-  max-width: 100%;
-  height: auto;
-}
-figure.wp-block-audio audio {
-  max-width: 100%;
-}
-
+/*@import "video";*/
 /*--------------------------------------------------------------
 ## Buttons
 --------------------------------------------------------------*/
-.wp-block-button {
-  display: inline-block;
-  padding: 5px 10px;
-  color: #ddd;
-  cursor: pointer;
-  font-size: 1rem;
-  background-color: #101213;
-  border-radius: 14px;
-}
-.wp-block-button.is-style-squared {
-  border-radius: 0px;
-}
-.wp-block-button.is-style-outline {
-  border: 2px solid #101213;
-  border-radius: 10px;
-  background-color: transparent;
-}
-
+/*@import "buttons";*/
 /*--------------------------------------------------------------
 # Print
 --------------------------------------------------------------*/

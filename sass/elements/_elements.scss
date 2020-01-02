@@ -154,6 +154,23 @@ img {
 
 figure {
     margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+    max-width: 100%;
+}
+figure.wp-caption  {
+    .wp-caption-text{
+        padding: 0.8075em 1em;
+        font-size: 1rem;
+        font-family: 'Lato', sans-serif;
+        background: #e5e5e5;
+        background: hsl(0, 0%, 90%);
+        color: #000;
+        text-align: center;
+        margin: 0.8075em 0;
+        a{
+            color: #000;
+            font-weight: bold;
+        }
+    }
 }
 
 @import "tables";

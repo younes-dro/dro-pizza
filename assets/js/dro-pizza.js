@@ -54,63 +54,6 @@
         });
     }
 
-    $.fn.handleGalley = function () {
-        return this.each(function () {
-            var $this = $(this);
-            var numberOfColums, numberOfImages;
-            var numberOfImages = $this.find('img').length;
-            
-            var classList = $this.attr('class').split(/\s+/);
-//            console.log(classList);
-            var t = classList.filter(function (item) {
-                if (item.indexOf('columns-') === 0) {
-                    return item;
-                }
-            });
-            numberOfColums = t[0].substr(8);
-            if(numberOfImages % numberOfColums !== 0){
-                var m = numberOfImages % numberOfColums ;
-                $this.find('li.blocks-gallery-item').slice(-m).each(function(e){
-                    
-                    var maxWidth = 100 / m ;
-                    maxWidth  = Number( maxWidth);
-                    maxWidth = maxWidth.toFixed(2);
-                    
-                    $(this).css({"maxWidth": maxWidth +'%'});
-                    
-                    
-                });
-            };
-        });
-
-    };
-    if ($('ul.wp-block-gallery').length) {
-        $('ul.wp-block-gallery').handleGalley();
-    }
-
-//    $.fn.toggleCaption = function () {
-//
-//        return this.each(function () {
-//            var $this = $(this);
-//            if ($this.find('figcaption').length) {
-//                
-//                var toggleCaption = $('<span/>', {'class': 'toggleCaption',
-//                    'html': '<i class=" toggleCaption-plus"></i>'});
-////                $this.find('figcaption').css({"display": "none"});
-//                $this.find('figure').after(toggleCaption);
-//                $this.find('span.toggleCaption').on('click',function(){
-//                    $(this).find('i').toggleClass('toggleCaption-minus');
-//                    $(this).prev('figure').find('figcaption').slideToggle();
-//                });
-//                
-//            }else{
-////               $this.css({"border":"1px solid #f00"});
-//            }
-//        });
-//    };
-//    if ($('li.blocks-gallery-item').length) {
-//        $('li.blocks-gallery-item').toggleCaption();
-//    }
 
 })(jQuery);
 
