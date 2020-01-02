@@ -2347,9 +2347,10 @@ object {
 
 .gallery-caption {
   display: block;
+  font-size: 0.7rem;
 }
 
-.toggleCaption {
+span.toggleCaption {
   color: #ccc;
   font-family: "Ionicons";
   display: inline-block;
@@ -2364,13 +2365,17 @@ object {
   text-align: center;
   margin-top: 10px;
 }
-
-.toggleCaption-plus:before {
+span.toggleCaption i {
+  font-style: normal;
+}
+span.toggleCaption i.toggleCaption-plus {
+  font-style: normal;
+}
+span.toggleCaption i.toggleCaption-plus::before {
   font-family: "Ionicons";
   content: "";
 }
-
-.toggleCaption-minus:before {
+span.toggleCaption i.toggleCaption-minus::before {
   font-family: "Ionicons";
   content: "";
 }
@@ -2389,13 +2394,24 @@ article.category-block ul.wp-block-gallery {
   border: 1px solid #eee;
 }
 article.category-block ul.wp-block-gallery li.blocks-gallery-item > figure {
-  /*border: 1px solid #ccc;*/
+  position: relative;
+  border: 1px solid #ccc;
 }
 article.category-block ul.wp-block-gallery li.blocks-gallery-item > figure img {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 article.category-block ul.wp-block-gallery figcaption {
-  display: none;
+  background-color: #101213b0;
+  color: #ddd;
+  display: block;
+  padding: 2px;
+  position: absolute;
+  bottom: 0;
+  line-height: 1rem;
+  font-size: 0.6rem;
+  overflow: auto;
+  max-height: 100%;
+  width: 100%;
 }
 
 .columns-2 li.blocks-gallery-item {
