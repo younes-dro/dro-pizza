@@ -47,7 +47,7 @@ function dro_pizza_customize_register( $wp_customize ) {
     // Adress
     $wp_customize->add_setting( 'dro_pizza_adress_infos', array(
         'type' => 'theme_mod',
-        'default' => 'Adress',
+        'default' => esc_html__( 'Adress', 'dro-pizza' ),
         'capability' => 'edit_theme_options',
         'sanitize_callback' => 'wp_filter_nohtml_kses'
     ) );

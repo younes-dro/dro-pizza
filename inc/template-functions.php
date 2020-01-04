@@ -155,7 +155,7 @@ add_filter( 'get_the_archive_title', 'dro_pizza_custom_archive_title' );
  * @param string $title
  * @return string
  */
-function max_title_length( $title ) {
+function dro_pizza_max_title_length( $title ) {
     if(is_home() || is_tag() || is_archive()){
         $max = 40;
         if( strlen( $title ) > $max ) {
@@ -167,5 +167,5 @@ function max_title_length( $title ) {
     
     return $title;
 }
-add_filter( 'the_title', 'max_title_length');
+add_filter( 'the_title', 'dro_pizza_max_title_length');
 
