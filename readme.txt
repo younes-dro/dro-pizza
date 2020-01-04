@@ -6,7 +6,7 @@ Requires PHP: 5.5.12
 Stable tag: 1.2.4
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags:  custom-logo, custom-menu, featured-images, one-column, full-width-template, theme-options
+Tags: one-column, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, flexible-header, theme-options, threaded-comments, translation-ready, blog, food-and-drink
 
 == Description ==
 
