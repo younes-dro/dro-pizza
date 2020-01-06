@@ -1,9 +1,10 @@
 === Dro Pizza ===
 Contributors: vanbom
+Donate link: https://www.paypal.me/younesdro
 Requires at least: 5.3.2
 Tested up to: 5.3.2
 Requires PHP: 5.5.12
-Stable tag: 1.2.4
+Stable tag: 1.2.7
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, flexible-header, theme-options, threaded-comments, translation-ready, blog, food-and-drink
