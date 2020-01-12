@@ -11,6 +11,13 @@
      */
     var droPizzaMainMenu = $('nav.main-navigation ul.nav-menu').clone(true, true);
     $(droPizzaMainMenu).droSlidingMenu();
+    
+    /**
+     * 
+     */
+    $(window).on('load',function(){
+        $('.pre-loading').fadeOut(1000);
+    });
 
     /**
      * Show/ hide meta entry (Tags , Categories).
