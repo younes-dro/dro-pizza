@@ -17,18 +17,22 @@ object {
 .blured{
     filter: blur(5px);
 }
-.pre-loading{
+.loading-container{
     position: fixed;
+    display: table;
     width: 100%;
     height: 100vh;
-    /* background: linear-gradient(to right, #ff8a00, #da1b60); */
-    background-image: url(assets/images/wpspin.gif);
-    background-position: center center;
-    background-repeat: no-repeat;
     z-index: 999999;
-    background-color: rgba(204, 202, 202, 0.97);
-    @media screen and (min-width:992px){
-        background-image: url(assets/images/wpspin-2x.gif);    
+    background-color: rgb(255, 255, 255);   
+
+    .pre-loading{
+        background-image: url(assets/images/dro-pizza-loader.gif);
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: table-cell;
+        @media screen and (min-width:992px){
+            background-image: url(assets/images/dro-pizza-loader.gif);    
+        }
     }
 }
 /* Make sure logo link wraps around logo image. */

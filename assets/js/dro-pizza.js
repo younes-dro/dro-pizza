@@ -16,7 +16,7 @@
      * 
      */
     $(window).on('load',function(){
-        $('.pre-loading').fadeOut(1000);
+        $('.loading-container').fadeOut(1000);
     });
 
     /**

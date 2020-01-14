@@ -20,7 +20,7 @@
     </head>
 
     <body <?php body_class(); ?>>
-        <div class="pre-loading"></div>
+        <div class="loading-container"><div class="pre-loading"></div></div>
         <div id="page" class="site">
             <div class="container-fluid">
                 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dro-pizza' ); ?></a>

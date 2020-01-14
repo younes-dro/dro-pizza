@@ -2285,20 +2285,23 @@ object {
   filter: blur(5px);
 }
 
-.pre-loading {
+.loading-container {
   position: fixed;
+  display: table;
   width: 100%;
   height: 100vh;
-  /* background: linear-gradient(to right, #ff8a00, #da1b60); */
-  background-image: url(assets/images/wpspin.gif);
+  z-index: 999999;
+  background-color: white;
+}
+.loading-container .pre-loading {
+  background-image: url(assets/images/dro-pizza-loader.gif);
   background-position: center center;
   background-repeat: no-repeat;
-  z-index: 999999;
-  background-color: rgba(204, 202, 202, 0.97);
+  display: table-cell;
 }
 @media screen and (min-width: 992px) {
-  .pre-loading {
-    background-image: url(assets/images/wpspin-2x.gif);
+  .loading-container .pre-loading {
+    background-image: url(assets/images/dro-pizza-loader.gif);
   }
 }
 
