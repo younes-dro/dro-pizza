@@ -64,6 +64,9 @@ https://pxhere.com/fr/photo/1104270
 https://pxhere.com/fr/photo/954587
 https://pxhere.com/fr/photo/121603
 
+The gift loader  , Copyright Younes DRO
+License : MIT
+source : https://github.com/younes-dro/dro-illustration/blob/master/dro-pizza/dro-pizza-loader.gif
 
 jQuery Superfish Menu Plugin - v1.7.9, Copyright (c) 2016 Joel Birch
 License : MIT
