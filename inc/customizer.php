@@ -118,6 +118,20 @@ function dro_pizza_customize_register( $wp_customize ) {
         'priority' => 100
             )
     );
+    // WhatsApp sharing
+    $wp_customize->add_setting('dro_pizza_whatsapp_status', array(
+        'default' => $defaults['dro_pizza_whatsapp_status'],
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'dro_pizza_sanitize_checkbox'
+        )
+    );
+    $wp_customize->add_control('dro_pizza_whatsapp_status', array(
+        'label' => esc_html__('Show WhatsApp share link?', 'dro-pizza'),
+        'section' => 'dro_pizza_meta_settings',
+        'type' => 'checkbox',
+        'priority' => 100        
+        )
+    );
     /**
      * Footer section
      */
@@ -232,6 +246,7 @@ if ( !function_exists( 'dro_pizza_default_meta_options' ) ):
         $defaults['dro_pizza_continue_reading_status'] = true;
         $defaults['dro_pizza_postedon_status'] = true;
         $defaults['dro_pizza_tags_status'] = true;
+        $defaults['dro_pizza_whatsapp_status'] = false;
         $defaults['dro_pizza_footer_logo'] = true;
         $defaults['dro_pizza_footer_blogname'] = false;
 
