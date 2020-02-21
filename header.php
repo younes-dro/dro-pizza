@@ -20,6 +20,7 @@
     </head>
 
     <body <?php body_class(); ?>>
+        <?php wp_body_open();?>
         <div class="loading-container"><div class="pre-loading"></div></div>
         <div id="page" class="site">
             <div class="container-fluid">
