@@ -38,8 +38,18 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content col-12 col-lg-9">
-            <?php dro_pizza_post_thumbnail(); ?>
-		<?php the_content()  ?>
+            <?php 
+            dro_pizza_post_thumbnail();
+            the_content();
+            wp_link_pages(
+                    array(
+                        'before'=>'<div class="page-links">'.  esc_html__('Pages:', 'dro-pizza'),
+                        'after'=>'</div>',
+                        'link_before' =>'<span>',
+                        'link_after' =>'</span>'
+                        )
+                    );
+            ?>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
