@@ -1149,7 +1149,7 @@ body.wp_mm_enable {
   display: none;
   margin: 0 0 0 2px;
 }
-.wp_mm_wrapper ul.nav-menu a {
+.wp_mm_wrapper ul.nav-menu a:not(.forward) {
   display: block;
   color: #fff;
   padding: 20px 15px;
@@ -1194,8 +1194,8 @@ body.wp_mm_enable {
 .wp_mm_wrapper ul.nav-menu li.menu-item-has-children > a {
   width: 50%;
 }
-.wp_mm_wrapper ul.nav-menu li.page_item_has_children span,
-.wp_mm_wrapper ul.nav-menu li.menu-item-has-children span {
+.wp_mm_wrapper ul.nav-menu li.page_item_has_children a.forward,
+.wp_mm_wrapper ul.nav-menu li.menu-item-has-children a.forward {
   font-size: 24px;
   cursor: pointer;
   border: 1px solid;
@@ -1211,7 +1211,7 @@ body.wp_mm_enable {
   border-left: 2px solid #7ac1b7;
 }
 
-span.forward {
+a.forward {
   float: right;
   margin: 20px 10px 0 0;
 }
@@ -1232,6 +1232,7 @@ span.left {
 #toggle-menu {
   cursor: pointer;
   /*float: right;*/
+  border: none !important;
   height: 45px;
   width: 45px;
   position: absolute;

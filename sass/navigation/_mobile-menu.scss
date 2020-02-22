@@ -46,7 +46,7 @@ body.wp_mm_enable{
         position: relative;
         display: none;
         margin:  0 0 0 2px;
-        a{
+        a:not(.forward){
             display: block;
             color: #fff;
             padding: 20px 15px;
@@ -95,7 +95,7 @@ body.wp_mm_enable{
         }
         li.page_item_has_children,
         li.menu-item-has-children{
-            span{
+            a.forward{
                 font-size: 24px;
                 cursor: pointer;
                 border: 1px solid;
@@ -115,7 +115,7 @@ body.wp_mm_enable{
     }    
 
 }
-span.forward{
+a.forward{
     float: right;
     margin: 20px 10px 0 0;
 }
@@ -133,6 +133,7 @@ span.left{
 #toggle-menu{
     cursor: pointer;
     /*float: right;*/
+    border:none!important;
     height: 45px;
     width: 45px;
     position: absolute;
