@@ -24,7 +24,7 @@
             createRightNavButton();
         },
         createWrappers = function () {
-            droMenu.toggleControl           = $("<div/>", {"id": droMenu.settings.toggleMenuId,
+            droMenu.toggleControl           = $("<button/>", {"id": droMenu.settings.toggleMenuId,
                                                  "html": "<span></span><span></span><span></span><span></span>"}),
             droMenu.toggleControlContainer  = $("<div/>",{"id": droMenu.settings.toggleMenuContainerId,
                                                   "class": droMenu.settings.toggleMenuContainerClass}),
@@ -37,7 +37,7 @@
         },
         createRightNavButton = function () {
             droMenu.wrapperControl.find("li.page_item_has_children , li.menu-item-has-children").each(function () {
-                var rightNavButton = $("<span/>", {"class": "ion-ios-arrow-forward forward"});
+                var rightNavButton = $("<a/>", {"class": "ion-ios-arrow-forward forward"});
                 rightNavButton.prependTo($(this));
             });
         },
@@ -84,7 +84,7 @@
         openCurrentPage();
         droMenu.toggleControl.click(toggleMobileMenu);
         droMenu.bodyOverlay.click(toggleMobileMenu);
-        droMenu.wrapperControl.find("li.page_item_has_children, li.menu-item-has-children > span").click(showSubMenu);
+        droMenu.wrapperControl.find("li.page_item_has_children, li.menu-item-has-children > a.forward").click(showSubMenu);
         droMenu.wrapperControl.find("li.back > span").click(goBack);
     };
 })(jQuery);
