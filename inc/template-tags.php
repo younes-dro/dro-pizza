@@ -17,7 +17,8 @@ if ( ! function_exists( 'dro_pizza_posted_on' ) ) :
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
-		$time_string = sprintf( $time_string,
+		$time_string = sprintf(
+			$time_string,
 			esc_attr( get_the_date( DATE_W3C ) ),
 			esc_html( get_the_date() ),
 			esc_attr( get_the_modified_date( DATE_W3C ) ),
@@ -65,10 +66,9 @@ if ( ! function_exists( 'dro_pizza_entry_footer' ) ) :
 				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'dro-pizza' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
-			
-			$tags_list = get_the_tag_list( );
+			$tags_list = get_the_tag_list();
 			if ( $tags_list ) {
-				
+
 				printf( '<span class="tags-links">%1$s</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
@@ -134,27 +134,34 @@ if ( ! function_exists( 'dro_pizza_post_thumbnail' ) ) :
 
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 			<?php
-			the_post_thumbnail( 'post-thumbnail', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
+			the_post_thumbnail(
+				'post-thumbnail',
+				array(
+					'alt' => the_title_attribute(
+						array(
+							'echo' => false,
+						)
+					),
+				)
+			);
 			?>
 		</a>
 
-		<?php
+			<?php
 		endif; // End is_singular().
 	}
 endif;
 
-if ( ! function_exists( 'dro_pizza_posts_pagination' ) ):
-        /**
-         * Display the pagination Index and Archive pages .
-         */
-        function dro_pizza_posts_pagination(){
-            the_posts_pagination(array(
-                'prev_text' => '<span><i class="ion ion-ios-arrow-left"></i></span>',
-                'next_text' => '<span><i class="ion ion-ios-arrow-right"></i></span>'
-            ));
-        }
+if ( ! function_exists( 'dro_pizza_posts_pagination' ) ) :
+		/**
+		 * Display the pagination Index and Archive pages .
+		 */
+	function dro_pizza_posts_pagination() {
+		the_posts_pagination(
+			array(
+				'prev_text' => '<span><i class="ion ion-ios-arrow-left"></i></span>',
+				'next_text' => '<span><i class="ion ion-ios-arrow-right"></i></span>',
+			)
+		);
+	}
 endif;

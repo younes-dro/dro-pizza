@@ -13,134 +13,131 @@
  * @return array
  */
 function dro_pizza_body_classes( $classes ) {
-    // Adds a class of hfeed to non-singular pages.
-    if (!is_singular()) {
-        $classes[] = 'hfeed';
-    }
+	// Adds a class of hfeed to non-singular pages.
+	if ( ! is_singular() ) {
+		$classes[] = 'hfeed';
+	}
 
-    // Adds a class of no-sidebar when there is no sidebar present.
-    if (!is_active_sidebar( 'sidebar-1' ) ) {
-        $classes[] = 'no-sidebar';
-    }
+	// Adds a class of no-sidebar when there is no sidebar present.
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		$classes[] = 'no-sidebar';
+	}
 
-    return $classes;
+	return $classes;
 }
 
-add_filter('body_class', 'dro_pizza_body_classes');
+add_filter( 'body_class', 'dro_pizza_body_classes' );
 
-if (!function_exists('dro_pizza_article_classes')):
+if ( ! function_exists( 'dro_pizza_article_classes' ) ) :
 
-    /**
-     * Add custom classes to the <article>
-     * 
-     * @param array $classes Classes for the article element
-     * @return array 
-     */
-    function dro_pizza_article_classes($classes) {
-        if (is_single()) {
-            $classes[] = 'row';
-        }
-        if(is_front_page() || is_archive() || is_search()){
-            $classes[] = 'post-item';
-        }
+	/**
+	 * Add custom classes to the <article>
+	 *
+	 * @param array $classes Classes for the article element
+	 * @return array
+	 */
+	function dro_pizza_article_classes( $classes ) {
+		if ( is_single() ) {
+			$classes[] = 'row';
+		}
+		if ( is_front_page() || is_archive() || is_search() ) {
+			$classes[] = 'post-item';
+		}
 
-        return $classes;
-    }
+		return $classes;
+	}
 
 endif;
-add_filter('post_class', 'dro_pizza_article_classes');
+add_filter( 'post_class', 'dro_pizza_article_classes' );
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
 function dro_pizza_pingback_header() {
-    if (is_singular() && pings_open()) {
-        printf('<link rel="pingback" href="%s">', esc_url(get_bloginfo('pingback_url')));
-    }
+	if ( is_singular() && pings_open() ) {
+		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
+	}
 }
 
-add_action('wp_head', 'dro_pizza_pingback_header');
+add_action( 'wp_head', 'dro_pizza_pingback_header' );
 
-if ( !function_exists( 'dro_pizza_image_header' ) ){
-    /**
-     * Return the background image for header
-     */
-    function dro_pizza_image_header(){
-        
-        if(is_home() || is_front_page()):
-            return get_header_image();
-        endif;
-        if( is_single() || is_page() ):
-            return get_the_post_thumbnail_url();
-        endif;
-        
-        return FALSE;
-    }
+if ( ! function_exists( 'dro_pizza_image_header' ) ) {
+	/**
+	 * Return the background image for header
+	 */
+	function dro_pizza_image_header() {
+
+		if ( is_home() || is_front_page() ) :
+			return get_header_image();
+		endif;
+		if ( is_single() || is_page() ) :
+			return get_the_post_thumbnail_url();
+		endif;
+
+		return false;
+	}
 }
 
-if ( !function_exists( 'dro_pizza_sidebar_status' ) ) {
-    /*
-     * Whether a sidebar is in use
-     */
+if ( ! function_exists( 'dro_pizza_sidebar_status' ) ) {
+	/*
+	 * Whether a sidebar is in use
+	 */
 
-    function dro_pizza_sidebar_status($sidebar) {
+	function dro_pizza_sidebar_status( $sidebar ) {
 
-        if (is_active_sidebar($sidebar)) {
+		if ( is_active_sidebar( $sidebar ) ) {
 
-            return TRUE;
-        }
-    }
-
+			return true;
+		}
+	}
 }
-add_action('after_setup_theme', 'dro_pizza_sidebar_status');
+add_action( 'after_setup_theme', 'dro_pizza_sidebar_status' );
 
-if (!function_exists('dro_piza_get_excerpt')) {
+if ( ! function_exists( 'dro_piza_get_excerpt' ) ) {
 
-    /**
-     * Limit the excerpt by number of characters but do NOT truncate the last word.
-     * 
-     * @global object $post
-     * @param int $limit
-     * @param string $source
-     * @return string
-     */
-    function dro_piza_get_excerpt($limit, $source = null) {
+	/**
+	 * Limit the excerpt by number of characters but do NOT truncate the last word.
+	 *
+	 * @global object $post
+	 * @param int    $limit
+	 * @param string $source
+	 * @return string
+	 */
+	function dro_piza_get_excerpt( $limit, $source = null ) {
 
-        global $post;
+		global $post;
 
-        $excerpt = $source == "content" ? get_the_content() : get_the_excerpt();
+		$excerpt = $source == 'content' ? get_the_content() : get_the_excerpt();
 
-        $excerpt = preg_replace(" (\[.*?\])", '', $excerpt);
+		$excerpt = preg_replace( ' (\[.*?\])', '', $excerpt );
 
+		$excerpt = substr( $excerpt, 0, $limit );
 
-        $excerpt = substr($excerpt, 0, $limit);
+		$excerpt = substr( $excerpt, 0, strripos( $excerpt, ' ' ) );
 
-        $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+		$excerpt = trim( preg_replace( '/\s+/', ' ', $excerpt ) );
 
-        $excerpt = trim(preg_replace('/\s+/', ' ', $excerpt));
-
-        return wp_kses($excerpt, 'post');
-    }
-
+		return wp_kses( $excerpt, 'post' );
+	}
 }
-if (!function_exists('dro_pizza_is_active_sidebar')) {
+if ( ! function_exists( 'dro_pizza_is_active_sidebar' ) ) {
 
-    /**
-     * Check if sidebar is active
-     */
-    function dro_pizza_is_active_sidebar($index) {
-        global $wp_registered_sidebars;
-        $widgetcolums = wp_get_sidebars_widgets();
-        if ($widgetcolums[$index])
-            return true;
-        return false;
-    }
-
+	/**
+	 * Check if sidebar is active
+	 */
+	function dro_pizza_is_active_sidebar( $index ) {
+		global $wp_registered_sidebars;
+		$widgetcolums = wp_get_sidebars_widgets();
+		if ( $widgetcolums[ $index ] ) {
+			return true;
+		}
+		return false;
+	}
 }
 /**
  * Remove archive title prefixes.
  *
- * @param  string  $title  The archive title from get_the_archive_title();
+ * @param  string $title  The archive title from get_the_archive_title();
  * @return string          The cleaned title.
  */
 function dro_pizza_custom_archive_title( $title ) {
@@ -151,21 +148,21 @@ add_filter( 'get_the_archive_title', 'dro_pizza_custom_archive_title' );
 
 /**
  * Limit  title length homepage
- * 
+ *
  * @param string $title
  * @return string
  */
 function dro_pizza_max_title_length( $title ) {
-    if(is_home() || is_tag() || is_archive()){
-        $max = 40;
-        if( strlen( $title ) > $max ) {
-            return substr( $title, 0, $max ). " &hellip;";
-        } else {
-            return $title;
-        }
-    }
-    
-    return $title;
+	if ( is_home() || is_tag() || is_archive() ) {
+		$max = 40;
+		if ( strlen( $title ) > $max ) {
+			return substr( $title, 0, $max ) . ' &hellip;';
+		} else {
+			return $title;
+		}
+	}
+
+	return $title;
 }
-add_filter( 'the_title', 'dro_pizza_max_title_length');
+add_filter( 'the_title', 'dro_pizza_max_title_length' );
 
