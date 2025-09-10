@@ -1,7 +1,9 @@
 {
-    "$schema": "https://schemas.wp.org/trunk/theme.json",
-    "version": 2,
+    "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+    "version": 3,
     "settings": {
+        "appearanceTools": true,
+        "blocks": {},
         "color": {
             "palette": [
                 {
@@ -414,45 +416,23 @@
                     "fontSize": "0.8rem"
                 }
             }
-        },
-        "sections": {
-            "header": {
-                "color": {
-                    "background": "var(--wp--preset--gradient--header-gradient)"
-                },
-                "spacing": {
-                    "margin": {
-                        "top": "0",
-                        "bottom": "0"
-                    }
-                }
-            },
-            "footer": {
-                "color": {
-                    "background": "#000000",
-                    "text": "var(--wp--preset--color--footer-text)"
-                },
-                "typography": {
-                    "fontSize": "0.8rem",
-                    "fontFamily": "sans-serif"
-                },
-                "spacing": {
-                    "padding": {
-                        "top": "10px",
-                        "bottom": "10px"
-                    }
-                }
-            }
         }
     },
     "templateParts": [
         {
             "name": "header",
-            "area": "header"
+            "area": "header",
+            "title": "Header"
         },
         {
+            "name": "header",
+            "area": "header",
+            "title": "Vertical site header"
+        }
+        {
             "name": "footer",
-            "area": "footer"
+            "area": "footer",
+            "title": "Footer"
         }
     ],
     "customTemplates": [
